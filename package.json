@@ -1,0 +1,13 @@
+{
+  "name": "tangible-field-example",
+  "description": "",
+  "scripts": {
+    "dev": "roll dev",
+    "build": "roll build",
+    "format": "roll format"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@tangible/roller": "1.x"
+  }
+}
