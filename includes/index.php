@@ -1,5 +1,9 @@
 <?php
 
+defined('ABSPATH') or die();
+
+require_once __DIR__ . '/ajax/index.php';
+
 $plugin->register_settings([
   'tabs' => [
     'php' => [
