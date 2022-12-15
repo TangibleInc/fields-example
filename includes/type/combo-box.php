@@ -53,9 +53,9 @@ Might be renamed to "search" in the future.
 
 <div class="tangible-settings-row">
   <?= $fields->render_field($plugin->get_settings_key() . '[setting_combo_async_name]', [
-    'type'  => 'combo-box',
-    'value' => $plugin->get_settings()['setting_combo_async_name'] ?? '',
-    'label' => 'Categories list combobox',
+    'type'       => 'combo-box',
+    'value'      => $plugin->get_settings()['setting_combo_async_name'] ?? '',
+    'label'      => 'Categories list combobox',
     'is_async'   => true,
     'search_url' => get_rest_url() . 'wp/v2/search',
     'async_args' => [
@@ -70,9 +70,9 @@ Might be renamed to "search" in the future.
 
 <div class="tangible-settings-row">
   <?= $fields->render_field($plugin->get_settings_key() . '[setting_combo_ajax_module_name]', [
-    'type'  => 'combo-box',
-    'value' => $plugin->get_settings()['setting_combo_ajax_module_name'] ?? '',
-    'label' => 'Categories list combobox',
+    'type'        => 'combo-box',
+    'value'       => $plugin->get_settings()['setting_combo_ajax_module_name'] ?? '',
+    'label'       => 'Categories list combobox',
     'is_async'    => true,
     'ajax_action' => 'tangible_field_select_post', // @see ../ajax/index.php
     'async_args'  => [
@@ -143,9 +143,9 @@ Might be renamed to "search" in the future.
 
       // Async list (framework ajax module, @see https://docs.tangible.one/modules/plugin-framework/ajax/)
       'is_async'   => true,
-      'ajax_action' => 'ajax_action_name',
+      'ajax_action'=> 'ajax_action_name',
       'async_args' => [
-        'subtype' => 'post'
+        'post_type' => 'post'
       ],
 
       'placeholder' => 'Example placeholder',

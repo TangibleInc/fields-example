@@ -24,12 +24,11 @@ $ajax->add_action('tangible_field_select_post', function($data, $ajax) use($plug
   global $wpdb;
 
   $post_title = $data['search'];
-  $field = $data['field'];
 
-  $limit = (int) ( $field['result_length'] ?? 10 );
-  $post_type = explode(',', $field['post_type'] ?? 'post');
+  $limit = (int) ( $data['result_length'] ?? 10 );
+  $post_type = explode(',', $data['post_type'] ?? 'post');
 
-  $order = $field['result_order'] ?? 'ASC';
+  $order = $data['result_order'] ?? 'ASC';
   if( ! in_array($order, ['ASC', 'DESC']) ) $order = 'ASC';
 
   /**

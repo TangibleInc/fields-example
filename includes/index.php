@@ -31,6 +31,7 @@ $plugin->register_settings([
                 'combo-box',
                 'date',
                 'dimensions',
+                'field-group',
                 'file-upload',
                 'gradient',
                 'number',
@@ -60,6 +61,7 @@ $plugin->register_settings([
             <ul>
               <?php foreach([
                 'repeater-context',
+                'field-group-context'
               ] as $type): ?>
               <li style="<?= ($_GET['type'] ?? '') === $type ? 'font-weight: bold' : '' ?>">
                 <a href="<?= $current_page ?>&type=<?= $type ?>" ><?= $type ?></a>
