@@ -1,5 +1,4 @@
-
-        <h3>Text</h3>
+<h3>Text</h3>
 
 <h4>Example</h4>
 

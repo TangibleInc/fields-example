@@ -34,6 +34,7 @@ $plugin->register_settings([
                 'file-upload',
                 'gradient',
                 'number',
+                'radio',
                 'select',
                 'switch',
                 'text',
