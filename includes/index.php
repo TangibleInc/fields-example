@@ -33,7 +33,7 @@ $plugin->register_settings([
                 'date',
                 'dimensions',
                 'field-group',
-                'file-upload',
+                'file',
                 'gradient',
                 'number',
                 'radio',
