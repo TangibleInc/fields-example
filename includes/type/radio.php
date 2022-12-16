@@ -4,18 +4,12 @@
 
 <div class="tangible-settings-row">
   <?= $fields->render_field( $plugin->get_settings_key() . '[setting_radio_name]', [
-    'label'       => 'Radio field',
-    'type'        => 'radio',
-    'value'       => $plugin->get_settings()['setting_radio_name'] ?? '',
-    'options'     => [
-      [
-        'value' => '1',
-        'label' => 'Value 1'
-      ],
-      [
-        'value' => '2',
-        'label' => 'Value 2'
-      ]
+    'label'   => 'Radio field',
+    'type'    => 'radio',
+    'value'   => $plugin->get_settings()['setting_radio_name'] ?? '',
+    'choices' => [
+      '1' => 'Value 1',
+      '2' => 'Value 2'
     ],
     'placeholder' => 'Example placeholder',
     'description' => 'Example description'
@@ -44,15 +38,9 @@
     $fields->render_field( $name, [
       'label'       => 'Text field',
       'type'        => 'radio',
-      'options'     => [
-        [
-          'value' => '1',
-          'label' => 'Value 1'
-        ],
-        [
-          'value' => '2',
-          'label' => 'Value 2'
-        ]
+      'choices' => [
+        '1' => 'Value 1',
+        '2' => 'Value 2'
       ],
       'placeholder' => 'Example placeholder',
       'description' => 'Example description'
