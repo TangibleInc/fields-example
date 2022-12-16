@@ -27,6 +27,7 @@ $plugin->register_settings([
             <ul>
               <?php foreach([
                 'button-group',
+                'checkbox',
                 'color',
                 'combo-box',
                 'date',
