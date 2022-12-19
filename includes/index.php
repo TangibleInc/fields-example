@@ -50,22 +50,22 @@ $plugin->register_settings([
             <strong>Repeaters</strong>
             <ul>
               <?php foreach([
-                'repeater-list',
-                'repeater-table',
+                'repeater/block',
+                'repeater/table',
               ] as $type): ?>
               <li style="<?= ($_GET['type'] ?? '') === $type ? 'font-weight: bold' : '' ?>">
-                <a href="<?= $current_page ?>&type=<?= $type ?>" ><?= $type ?></a>
+                <a href="<?= $current_page ?>&type=<?= $type ?>" ><?= str_replace( 'repeater/', '', $type) ?></a>
               </li>
               <?php endforeach; ?>
             </ul>
             <strong>Dynamic attributes</strong>
             <ul>
               <?php foreach([
-                'repeater-context',
-                'field-group-context'
+                'context/repeater',
+                'context/field-group'
               ] as $type): ?>
               <li style="<?= ($_GET['type'] ?? '') === $type ? 'font-weight: bold' : '' ?>">
-                <a href="<?= $current_page ?>&type=<?= $type ?>" ><?= $type ?></a>
+                <a href="<?= $current_page ?>&type=<?= $type ?>" ><?= str_replace( 'context/', '', $type) ?></a>
               </li>
               <?php endforeach; ?>
             </ul>

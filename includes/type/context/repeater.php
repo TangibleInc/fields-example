@@ -22,10 +22,11 @@ In this example:
 
 <div class="tangible-settings-row">
   <?= $fields->render_field($plugin->get_settings_key() . '[setting_repeater_context_name]', [
-    'label'   => 'Repeater with dynamic attributes',
-    'type'    => 'repeater-list',
-    'value'   => $plugin->get_settings()['setting_repeater_context_name'] ?? false,
-    'fields'  => [    
+    'label'      => 'Repeater with dynamic attributes',
+    'type'       => 'repeater',
+    'layout'     => 'block',
+    'value'      => $plugin->get_settings()['setting_repeater_context_name'] ?? false,
+    'sub_fields' => [    
       [
         'type'  => 'text',
         'label' => 'Label of the last field',
@@ -82,10 +83,11 @@ In this example:
     // Option can be with or without categories
 
     $fields->render_field($name, [
-      'label'   => 'Repeater with dynamic attributes',
-      'type'    => 'repeater-list',
-      'value'   => $value,
-      'fields'  => [    
+      'label'      => 'Repeater with dynamic attributes',
+      'type'       => 'repeater',
+      'layout'     => 'block',
+      'value'      => $value,
+      'sub_fields' => [    
         [
           'type'  => 'text',
           'label' => 'Label of the last field',

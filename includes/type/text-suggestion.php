@@ -65,7 +65,6 @@ Can contain both text and dynamic element from the dropdown.<br />
 
 <pre>
   <code>
-    
     $fields = tangible_fields();
 
     $name  = $plugin->get_settings_key() . '[setting_dynamic_text_name]';

@@ -60,8 +60,8 @@ See repeater context to explanations.
     $value = $plugin->get_settings()['setting_field_group_dynamic'] ?? '';
 
     $fields->render_field( $name, [
-      'label'   => 'Text field',
-      'type'    => 'text',
+      'label'   => 'Field group',
+      'type'    => 'field-group',
       'value'   => $value,
       'fields'  => [
         [

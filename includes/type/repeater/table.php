@@ -1,16 +1,17 @@
 
-<h3>Repeater - List</h3>
+<h3>Repeater - Table</h3>
 
 A repeater row can contain any field.
 
 <h4>Example</h4>
 
 <div class="tangible-settings-row">
-  <?= $fields->render_field($plugin->get_settings_key() . '[setting_repeater_list_name]', [
-    'label'   => 'Repeater field',
-    'type'    => 'repeater-list',
-    'value'   => $plugin->get_settings()['setting_repeater_list_name'] ?? false,
-    'fields'  => [          
+  <?= $fields->render_field($plugin->get_settings_key() . '[setting_repeater_table_name]', [
+    'label'      => 'Repeater Table',
+    'type'       => 'repeater',
+    'layout'     => 'table',
+    'value'      => $plugin->get_settings()['setting_repeater_table_name'] ?? false,
+    'sub_fields' => [          
       [
         'label'   => 'Text',
         'type'    => 'text',
@@ -50,7 +51,7 @@ A repeater row can contain any field.
 <h4>Value</h4>
 
 <?php tangible()->see(
-  $plugin->get_settings()['setting_repeater_list_name'] ?? ''
+  $plugin->get_settings()['setting_repeater_table_name'] ?? ''
 ); ?>
 
 <h4>Code</h4>
@@ -59,19 +60,20 @@ A repeater row can contain any field.
   <code>
     $fields = tangible_fields();
 
-    $name  = $plugin->get_settings_key() . '[setting_repeater_list_name]';
-    $value = $plugin->get_settings()['setting_repeater_list_name'] ?? '';
+    $name  = $plugin->get_settings_key() . '[setting_repeater_table_name]';
+    $value = $plugin->get_settings()['setting_repeater_table_name'] ?? '';
 
     // Option can be with or without categories
 
     $fields->render_field($name, [
       'label'   => 'Repeater field',
-      'type'    => 'repeater-list',
+      'type'    => 'repeater',
+      'layout'  => 'table',
       'value'   => $value,
 
       // Can be any type of field, just make sure to add a name
 
-      'fields'  => [          
+      'sub_fields' => [          
         [
           'label'   => 'Text',
           'type'    => 'text',
