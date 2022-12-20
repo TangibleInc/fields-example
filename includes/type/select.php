@@ -7,9 +7,9 @@
     'type'  => 'select',
     'value' => $plugin->get_settings()['setting_select_name'] ?? '',
     'label' => 'Select',
-    'items' => [
-      [ 'id' => 'test1', 'name' => 'Test1' ],
-      [ 'id' => 'test2', 'name' => 'Test2' ],
+    'choices' => [
+      'test1' => 'Test1',
+      'test2' => 'Test2'
     ],
     'placeholder' => 'Example placeholder',
     'description' => 'Example description' 
@@ -39,9 +39,9 @@
       'type'  => 'select',
       'value' => $value,
       'label' => 'Select',
-      'items' => [
-        [ 'id' => 'test1', 'name' => 'Test1' ],
-        [ 'id' => 'test2', 'name' => 'Test2' ],
+      'choices' => [
+        'test1' => 'Test1',
+        'test2' => 'Test2'
       ],
       'placeholder' => 'Example placeholder',
       'description' => 'Example description' 

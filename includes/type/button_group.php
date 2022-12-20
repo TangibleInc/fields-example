@@ -1,25 +1,19 @@
 <h3>Button group</h3>
 
-Buttons can contain both <a href='https://developer.wordpress.org/resource/dashicons/'>dashicon</a> or text (it can be mixed in the same button group).
+Buttons can contain both <a href='https://developer.wordpress.org/resource/dashicons/'>dashicon</a> or text.
 
 <h4>Example with Dashicon</h4>
 
 <div class="tangible-settings-row">
   <?= $fields->render_field($plugin->get_settings_key() . '[setting_button_group_dashicon_name]', [
     'label'       => 'Button group field',
-    'type'        => 'button-group',
+    'type'        => 'button_group',
     'description' => 'Description',
-    'options'     => [
-      [
-        'value'     => 'left',
-        'dashicon'  => 'editor-alignleft'
-      ],[
-        'value'     => 'center',
-        'dashicon'  => 'editor-aligncenter'
-      ],[
-        'value'     => 'right',
-        'dashicon'  => 'editor-alignright'
-      ]
+    'use_dashicon'=> true,
+    'choices'     => [
+      'left'   => 'editor-alignleft',
+      'center' => 'editor-aligncenter',
+      'right'  => 'editor-alignright',
     ],
     'value' => $plugin->get_settings()['setting_button_group_dashicon_name'] ?? '',
   ]) ?>
@@ -30,19 +24,12 @@ Buttons can contain both <a href='https://developer.wordpress.org/resource/dashi
 <div class="tangible-settings-row">
   <?= $fields->render_field($plugin->get_settings_key() . '[setting_button_group_name]', [
     'label'       => 'Button group field',
-    'type'        => 'button-group',
+    'type'        => 'button_group',
     'description' => 'Description',
-    'options'     => [
-      [
-        'value' => 'one',
-        'label' => 'One'
-      ],[
-        'value' => 'two',
-        'label' => 'Two'
-      ],[
-        'value' => 'three',
-        'label' => 'Three'
-      ]
+    'choices'     => [
+      'one'   => 'One',
+      'two'   => 'Two',
+      'three' => 'Three',
     ],
     'value' => $plugin->get_settings()['setting_button_group_name'] ?? '',
   ]) ?>
@@ -70,26 +57,26 @@ Buttons can contain both <a href='https://developer.wordpress.org/resource/dashi
 
     $fields->render_field( $name, [
       'label'       => 'Button group field',
-      'type'        => 'button-group',
+      'type'        => 'button_group',
       'description' => 'Description',
-      'options'     => [
+      'value'       => $value
 
-        // Dashicon
+      // Dashicon
 
-        [
-          'value'     => 'left',
-          'dashicon'  => 'editor-alignleft'
-        ],
-        
+      'use_dashicon'=> true
+      'choices'     => [
+        'left'   => 'editor-alignleft',
+        'center' => 'editor-aligncenter',
+        'right'  => 'editor-alignright',
+      ],
+      
         // Text
 
-        [
-          'value' => 'center',
-          'label' => 'Text'
-        ]
-
+      'choices' => [
+        'one'   => 'One',
+        'two'   => 'Two',
+        'three' => 'Three',
       ],
-      'value' => $value
     ]);
   </code> 
 </pre>

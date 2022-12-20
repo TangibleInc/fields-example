@@ -41,16 +41,16 @@ In this example:
         'type'  => 'select',
         'label' => 'Post type of the ajax result of the last field',
         'name'  => 'field-post-type',
-        'items' => [
-          [ 'id' => 'post', 'name' => 'Post' ],
-          [ 'id' => 'page', 'name' => 'Page' ],
+        'choices' => [
+          'post' => 'Post',
+          'page' => 'Page',
         ],
       ],
       [
         'label'      => '{{field-label}}',
         'description' => '{{field-descrption}}',
         'name'       => 'post-select',
-        'type'       => 'combo-box',
+        'type'       => 'combo_box',
         'is_async'   => true,
         'search_url' => get_rest_url() . 'wp/v2/search',
         'async_args' => [
@@ -99,12 +99,12 @@ In this example:
           'name'  => 'field-descrption',
         ],
         [
-          'type'  => 'select',
-          'label' => 'Post type of the ajax result of the last field',
-          'name'  => 'field-post-type',
-          'items' => [
-            [ 'id' => 'post', 'name' => 'Post' ],
-            [ 'id' => 'page', 'name' => 'Page' ],
+          'type'    => 'select',
+          'label'   => 'Post type of the ajax result of the last field',
+          'name'    => 'field-post-type',
+          'choices' => [
+            'post' => 'Post',
+            'page' => 'Page',
           ],
         ],
         [

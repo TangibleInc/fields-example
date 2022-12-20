@@ -7,7 +7,7 @@ See repeater context to explanations.
 <div class="tangible-settings-row">
   <?= $fields->render_field( $plugin->get_settings_key() . '[setting_field_group_dynamic]', [
     'label'       => 'Field group',
-    'type'        => 'field-group',
+    'type'        => 'field_group',
     'value'       => $plugin->get_settings()['setting_field_group_dynamic'] ?? '',
     'fields'  => [          
       [
@@ -19,15 +19,15 @@ See repeater context to explanations.
         'type'  => 'select',
         'label' => 'Result order in the ajax search select',
         'name'  => 'result-order',
-        'items' => [
-          [ 'id' => 'ASC', 'name' => 'ASC' ],
-          [ 'id' => 'DESC', 'name' => 'DESC' ],
+        'choices' => [
+          'ASC'  => 'ASC',
+          'DESC' => 'DESC',
         ],
       ],
       [
         'label'      => 'Search result',
         'name'       => 'post-select',
-        'type'       => 'combo-box',
+        'type'       => 'combo_box',
         'is_async'   => true,
         'ajax_action'=> 'tangible_field_select_post',
         'async_args' => [
@@ -61,7 +61,7 @@ See repeater context to explanations.
 
     $fields->render_field( $name, [
       'label'   => 'Field group',
-      'type'    => 'field-group',
+      'type'    => 'field_group',
       'value'   => $value,
       'fields'  => [
         [
@@ -70,12 +70,12 @@ See repeater context to explanations.
         'name'  => 'result-number',
       ],
       [
-        'type'  => 'select',
-        'label' => 'Result order in the ajax search select',
-        'name'  => 'result-order',
-        'items' => [
-          [ 'id' => 'ASC', 'name' => 'ASC' ],
-          [ 'id' => 'DESC', 'name' => 'DESC' ],
+        'type'    => 'select',
+        'label'   => 'Result order in the ajax search select',
+        'name'    => 'result-order',
+        'choices' => [
+          'ASC'  => 'ASC',
+          'DESC' => 'DESC',
         ],
       ],
       [

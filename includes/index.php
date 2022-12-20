@@ -26,13 +26,13 @@ $plugin->register_settings([
             <strong>Fields</strong>
             <ul>
               <?php foreach([
-                'button-group',
+                'button_group',
                 'checkbox',
                 'color',
-                'combo-box',
+                'combo_box',
                 'date',
                 'dimensions',
-                'field-group',
+                'field_group',
                 'file',
                 'gradient',
                 'number',
@@ -40,7 +40,7 @@ $plugin->register_settings([
                 'select',
                 'switch',
                 'text',
-                'text-suggestion'
+                'text_suggestion'
               ] as $type): ?>
               <li style="<?= ($_GET['type'] ?? '') === $type ? 'font-weight: bold' : '' ?>">
                 <a href="<?= $current_page ?>&type=<?= $type ?>" ><?= $type ?></a>

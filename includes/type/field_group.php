@@ -7,7 +7,7 @@ A field group can contain any other field, an the global value will be saved as 
 <div class="tangible-settings-row">
   <?= $fields->render_field( $plugin->get_settings_key() . '[setting_field_group]', [
     'label'       => 'Field group',
-    'type'        => 'field-group',
+    'type'        => 'field_group',
     'value'       => $plugin->get_settings()['setting_field_group'] ?? '',
     'fields'  => [          
       [
@@ -44,7 +44,7 @@ A field group can contain any other field, an the global value will be saved as 
 
     $fields->render_field( $name, [
       'label'   => 'Text field',
-      'type'    => 'text',
+      'type'    => 'field_group',
       'value'   => $value,
       'fields'  => [
 

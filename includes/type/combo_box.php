@@ -7,14 +7,14 @@ Might be renamed to "search" in the future.
 
 <div class="tangible-settings-row">
   <?= $fields->render_field($plugin->get_settings_key() . '[setting_combo_name]', [
-    'type'  => 'combo-box',
+    'type'  => 'combo_box',
     'value' => $plugin->get_settings()['setting_combo_name'] ?? '',
     'label' => 'Categories list combobox',
-    'items' => [
-      [ 'id' => 'test1', 'name' => 'Test1' ],
-      [ 'id' => 'test2', 'name' => 'Test2' ],
-      [ 'id' => 'test3', 'name' => 'Test3' ],
-      [ 'id' => 'test4', 'name' => 'Test4' ]
+    'choices' => [
+      'test1' => 'Test1',
+      'test2' => 'Test2',
+      'test3' => 'Test3',
+      'test4' => 'Test4'
     ],
     'placeholder' => 'Example placeholder',
     'description' => 'Example description'
@@ -25,22 +25,22 @@ Might be renamed to "search" in the future.
 
 <div class="tangible-settings-row">
   <?= $fields->render_field($plugin->get_settings_key() . '[setting_combo_categories_name]', [
-    'type'  => 'combo-box',
+    'type'  => 'combo_box',
     'value' => $plugin->get_settings()['setting_combo_categories_name'] ?? '',
     'label' => 'Categories list combobox',
-    'items' => [
+    'choices' => [
       [
         'name'     => 'Category 1',
-        'children' => [ 
-          [ 'id' => 'test1', 'name' => 'Test1' ],
-          [ 'id' => 'test2', 'name' => 'Test2' ]
+        'choices' => [ 
+          'test1' => 'Test1',
+          'test2'=> 'Test2'
         ]
       ],
       [
         'name'     => 'Category 2',
-        'children' => [ 
-          [ 'id' => 'test3', 'name' => 'Test3' ],
-          [ 'id' => 'test4', 'name' => 'Test4' ]
+        'choices' => [ 
+          'test3' => 'Test3',
+          'test4' => 'Test4'
         ]
       ]
     ],
@@ -53,7 +53,7 @@ Might be renamed to "search" in the future.
 
 <div class="tangible-settings-row">
   <?= $fields->render_field($plugin->get_settings_key() . '[setting_combo_async_name]', [
-    'type'       => 'combo-box',
+    'type'       => 'combo_box',
     'value'      => $plugin->get_settings()['setting_combo_async_name'] ?? '',
     'label'      => 'Categories list combobox',
     'is_async'   => true,
@@ -70,7 +70,7 @@ Might be renamed to "search" in the future.
 
 <div class="tangible-settings-row">
   <?= $fields->render_field($plugin->get_settings_key() . '[setting_combo_ajax_module_name]', [
-    'type'        => 'combo-box',
+    'type'        => 'combo_box',
     'value'       => $plugin->get_settings()['setting_combo_ajax_module_name'] ?? '',
     'label'       => 'Categories list combobox',
     'is_async'    => true,
@@ -106,30 +106,32 @@ Might be renamed to "search" in the future.
     $value = $plugin->get_settings()['setting_combo_name'] ?? '';
 
     $fields->render_field( $name, [
-      'type'  => 'combo-box',
+      'type'  => 'combo_box',
       'value' => $value,
       'label' => 'Categories list combobox',
 
       // Simple list
-      'items' => [
-        [ 'id' => 'test1', 'name' => 'Test1' ],
-        [ 'id' => 'test2', 'name' => 'Test2' ]
+      'choices' => [
+        'test1' => 'Test1'
+        'test2' => 'Test2'
+        'test3' => 'Test3'
+        'test4' => 'Test4'
       ],
       
       // List with categories
-      'items' => [
+      'choices' => [
         [
-          'name'     => 'Category 1',
-          'children' => [ 
-            [ 'id' => 'test1', 'name' => 'Test1' ],
-            [ 'id' => 'test2', 'name' => 'Test2' ]
+          'name'    => 'Category 1',
+          'choices' => [ 
+            'test1' => 'Test1'
+            'test2' => 'Test2'
           ]
         ],
         [
-          'name'     => 'Category 2',
-          'children' => [ 
-            [ 'id' => 'test3', 'name' => 'Test3' ],
-            [ 'id' => 'test4', 'name' => 'Test4' ]
+          'name'    => 'Category 2',
+          'choices' => [
+            'test3' => 'Test3',
+            'test4' => 'Test4'
           ]
         ]
       ],

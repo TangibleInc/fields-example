@@ -12,7 +12,7 @@ Can contain both text and dynamic element from the dropdown.<br />
     'value'       => $plugin->get_settings()['setting_dynamic_text_name'] ?? '',
     'placeholder' => 'Example placeholder', 
     'description' => 'Example description',
-    'type'        => 'text-suggestion',
+    'type'        => 'text_suggestion',
     'options'     => [
       [ 'id' => 'test1', 'name' => 'Test1' ],
       [ 'id' => 'test2', 'name' => 'Test2' ],
@@ -31,7 +31,7 @@ Can contain both text and dynamic element from the dropdown.<br />
     'value'       => $plugin->get_settings()['setting_dynamic_text_categories_name'] ?? '',
     'placeholder' => 'Example placeholder', 
     'description' => 'Example description',
-    'type'        => 'text-suggestion',
+    'type'        => 'text_suggestion',
     'options'     => [
       [
         'name'     => 'Category',
@@ -76,7 +76,7 @@ Can contain both text and dynamic element from the dropdown.<br />
       'label'       => 'Dynamic text',
       'placeholder' => 'Example placeholder', 
       'description' => 'Example description',
-      'type'        => 'text-suggestion',
+      'type'        => 'text_suggestion',
       'options'     => [ 
         [
           'name'     => 'Category',
