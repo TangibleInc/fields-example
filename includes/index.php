@@ -30,6 +30,7 @@ $plugin->register_settings([
                 'checkbox',
                 'color',
                 'combo_box',
+                'combo_box_async',
                 'date',
                 'dimensions',
                 'field_group',

@@ -20,18 +20,18 @@ A repeater row can contain any field.
         'label'   => 'Dynamic text name',
         'type'    => 'text-suggestion',
         'name'    => 'dynamic_text_name',
-        'options' => [
+        'choices' => [
           [
-            'name'     => 'Category 1',
-            'children' => [ 
-              [ 'id' => 'test1', 'name' => 'Test1' ],
-              [ 'id' => 'test2', 'name' => 'Test2' ]
+            'name'    => 'Category 1',
+            'choices' => [ 
+              'test1' => 'Test1',
+              'test2' => 'Test2'
             ]
           ],[
-            'name'     => 'Category 2',
-            'children' => [ 
-              [ 'id' => 'test3', 'name' => 'Test3' ],
-              [ 'id' => 'test4', 'name' => 'Test4' ]
+            'name'    => 'Category 2',
+            'choices' => [ 
+              'test3' => 'Test3',
+              'test4' => 'Test4'
             ]
           ]
         ]
@@ -82,18 +82,18 @@ A repeater row can contain any field.
           'label'   => 'Dynamic text name',
           'type'    => 'text-suggestion',
           'name'    => 'dynamic_text_name',
-          'options' => [
+          'choices' => [
             [
-              'name'     => 'Category 1',
-              'children' => [ 
-                [ 'id' => 'test1', 'name' => 'Test1' ],
-                [ 'id' => 'test2', 'name' => 'Test2' ]
+              'name'    => 'Category 1',
+              'choices' => [ 
+                'test1' => 'Test1',
+                'test2' => 'Test2'
               ]
             ],[
-              'name'     => 'Category 2',
-              'children' => [ 
-                [ 'id' => 'test3', 'name' => 'Test3' ],
-                [ 'id' => 'test4', 'name' => 'Test4' ]
+              'name'    => 'Category 2',
+              'choices' => [ 
+                'test3' => 'Test3',
+                'test4' => 'Test4'
               ]
             ]
           ]
