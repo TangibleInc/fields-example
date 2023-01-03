@@ -36,6 +36,7 @@ $plugin->register_settings([
                 'field_group',
                 'file',
                 'gradient',
+                'gallery',
                 'number',
                 'radio',
                 'select',
