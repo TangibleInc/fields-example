@@ -28,10 +28,10 @@ $plugin->register_settings([
               <?php foreach([
                 'button_group',
                 'checkbox',
-                'color',
+                'color_picker',
                 'combo_box',
                 'combo_box_async',
-                'date',
+                'date_picker',
                 'dimensions',
                 'field_group',
                 'file',

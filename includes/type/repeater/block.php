@@ -37,7 +37,7 @@ A repeater row can contain any field.
         ]
       ],[
         'label' => 'Date field',
-        'type'  => 'date',
+        'type'  => 'date_picker',
         'name'  => 'date_picker_name',
       ]
     ]
@@ -99,7 +99,7 @@ A repeater row can contain any field.
           ]
         ],[
           'label' => 'Date field',
-          'type'  => 'date',
+          'type'  => 'date_picker',
           'name'  => 'date_name',
         ]
       ]

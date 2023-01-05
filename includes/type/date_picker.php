@@ -9,7 +9,7 @@ It's also not possible to set a time yet, only the date.
 <div class="tangible-settings-row">
   <?= $fields->render_field($plugin->get_settings_key() . '[setting_date_name]', [
     'label'       => 'Date field',
-    'type'        => 'date',
+    'type'        => 'date_picker',
     'description' => 'Description',
     'value'       => $plugin->get_settings()['setting_date_name'] ?? '',
   ]) ?>
@@ -36,7 +36,7 @@ It's also not possible to set a time yet, only the date.
 
     $fields->render_field( $name, [
       'label' => 'Date field',
-      'type'  => 'date',
+      'type'  => 'date_picker',
       'value' => $value,
     ]);
   </code> 
