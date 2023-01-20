@@ -23,6 +23,16 @@ $plugin->register_settings([
 
         <div class="tf-example-container">
           <div class="tf-example-list">
+            <strong>Installation</strong>
+            <ul>
+              <?php foreach([
+                'installation/composer'
+              ] as $type): ?>
+              <li style="<?= ($_GET['type'] ?? '') === $type ? 'font-weight: bold' : '' ?>">
+                <a href="<?= $current_page ?>&type=<?= $type ?>" ><?= str_replace( 'installation/', '', $type) ?></a>
+              </li>
+              <?php endforeach; ?>
+            </ul>
             <strong>Fields</strong>
             <ul>
               <?php foreach([
