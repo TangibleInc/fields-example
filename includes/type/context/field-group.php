@@ -59,7 +59,7 @@ See repeater context to explanations.
     $name  = $plugin->get_settings_key() . '[setting_field_group_dynamic]';
     $value = $plugin->get_settings()['setting_field_group_dynamic'] ?? '';
 
-    $fields->render_field( $name, [
+    echo $fields->render_field( $name, [
       'label'   => 'Field group',
       'type'    => 'field_group',
       'value'   => $value,

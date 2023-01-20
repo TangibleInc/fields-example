@@ -42,7 +42,7 @@ A field group can contain any other field, an the global value will be saved as 
     $name  = $plugin->get_settings_key() . '[setting_field_group]';
     $value = $plugin->get_settings()['setting_field_group'] ?? '';
 
-    $fields->render_field( $name, [
+    echo $fields->render_field( $name, [
       'label'   => 'Text field',
       'type'    => 'field_group',
       'value'   => $value,

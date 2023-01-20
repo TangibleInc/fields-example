@@ -72,7 +72,7 @@ Can contain both text and dynamic element from the dropdown.<br />
 
     // Option can be with or without categories
 
-    $fields->render_field($name, [
+    echo $fields->render_field($name, [
       'label'       => 'Dynamic text',
       'placeholder' => 'Example placeholder', 
       'description' => 'Example description',

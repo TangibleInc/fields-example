@@ -55,7 +55,7 @@ Buttons can contain both <a href='https://developer.wordpress.org/resource/dashi
     $name  = $plugin->get_settings_key() . '[setting_button_group_name]';
     $value = $plugin->get_settings()['setting_button_group_name'] ?? '';
 
-    $fields->render_field( $name, [
+    echo $fields->render_field( $name, [
       'label'       => 'Button group field',
       'type'        => 'button_group',
       'description' => 'Description',

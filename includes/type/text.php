@@ -31,7 +31,7 @@
     $name  = $plugin->get_settings_key() . '[setting_text_name]';
     $value = $plugin->get_settings()['setting_text_name'] ?? '';
 
-    $fields->render_field( $name, [
+    echo $fields->render_field( $name, [
       'label'       => 'Text field',
       'type'        => 'text',
       'value'       => $value,

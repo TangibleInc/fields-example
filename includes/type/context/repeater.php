@@ -82,7 +82,7 @@ In this example:
 
     // Option can be with or without categories
 
-    $fields->render_field($name, [
+    echo $fields->render_field($name, [
       'label'      => 'Repeater with dynamic attributes',
       'type'       => 'repeater',
       'layout'     => 'block',

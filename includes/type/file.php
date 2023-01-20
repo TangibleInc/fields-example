@@ -65,7 +65,7 @@ By default, all the mime types from this function are allowed: <a href="https://
     $name  = $plugin->get_settings_key() . '[setting_file_upload_name]';
     $value = $plugin->get_settings()['setting_file_upload_name'] ?? '';
 
-    $fields->render_field($name, [
+    echo $fields->render_field($name, [
       'label'       => 'Upload field',
       'type'        => 'file',
       'description' => 'Description',

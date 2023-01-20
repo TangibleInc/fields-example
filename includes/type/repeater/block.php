@@ -65,7 +65,7 @@ A repeater row can contain any field.
 
     // Option can be with or without categories
 
-    $fields->render_field($name, [
+    echo $fields->render_field($name, [
       'label'   => 'Repeater field',
       'type'    => 'repeater',
       'layout'  => 'block',

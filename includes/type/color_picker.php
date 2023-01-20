@@ -57,7 +57,7 @@ Possible format:
     $name  = $plugin->get_settings_key() . '[setting_color_name]';
     $value = $plugin->get_settings()['setting_color_name'] ?? '';
 
-    $fields->render_field( $name, [
+    echo $fields->render_field( $name, [
       'type'            => 'color',
       'value'           => $value,
       'label'           => 'Color',

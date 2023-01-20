@@ -84,7 +84,7 @@ In the case of an async combobox, it will be a json object with both the value a
     $name  = $plugin->get_settings_key() . '[setting_combo_name]';
     $value = $plugin->get_settings()['setting_combo_name'] ?? '';
 
-    $fields->render_field( $name, [
+    echo $fields->render_field( $name, [
       'type'  => 'combo_box',
       'value' => $value,
       'label' => 'Categories list combobox',

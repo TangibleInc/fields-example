@@ -44,7 +44,7 @@
     $name  = $plugin->get_settings_key() . '[setting_number_name]';
     $value = $plugin->get_settings()['setting_number_name'] ?? '';
 
-    $fields->render_field( $name, [
+    echo $fields->render_field( $name, [
       'label'       => 'Number field',
       'type'        => 'number',
       'value'       => $value,

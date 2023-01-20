@@ -31,7 +31,7 @@
     $name  = $plugin->get_settings_key() . '[setting_gallery_name]';
     $value = $plugin->get_settings()['setting_gallery_name'] ?? '';
 
-    $fields->render_field( $name, [
+    echo $fields->render_field( $name, [
       'label'       => 'Gallery field',
       'type'        => 'gallery',
       'value'       => $value,

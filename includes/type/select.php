@@ -126,7 +126,7 @@
     $name  = $plugin->get_settings_key() . '[setting_select_name]';
     $value = $plugin->get_settings()['setting_select_name'] ?? '';
 
-    $fields->render_field( $name, [
+    echo $fields->render_field( $name, [
       'type'  => 'select',
       'value' => $value,
       'label' => 'Select',

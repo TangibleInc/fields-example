@@ -32,7 +32,7 @@
     $name  = $plugin->get_settings_key() . '[setting_switch_name]';
     $value = $plugin->get_settings()['setting_switch_name'] ?? '';
 
-    $fields->render_field( $name, [
+    echo $fields->render_field( $name, [
       'label'       => 'Switch field',
       'type'        => 'switch',
       'value'       => $value,

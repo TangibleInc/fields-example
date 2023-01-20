@@ -31,7 +31,7 @@
     $name  = $plugin->get_settings_key() . '[setting_checkbox_name]';
     $value = $plugin->get_settings()['setting_checkbox_name'] ?? '';
 
-    $fields->render_field( $name, [
+    echo $fields->render_field( $name, [
       'label'       => 'Checkbox field',
       'type'        => 'checkbox',
       'value'       => $value,

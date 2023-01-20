@@ -34,7 +34,7 @@ It's also not possible to set a time yet, only the date.
     $name  = $plugin->get_settings_key() . '[setting_date_name]';
     $value = $plugin->get_settings()['setting_date_name'] ?? '';
 
-    $fields->render_field( $name, [
+    echo $fields->render_field( $name, [
       'label' => 'Date field',
       'type'  => 'date_picker',
       'value' => $value,
