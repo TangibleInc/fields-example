@@ -7,8 +7,8 @@
     'label'       => 'Switch field',
     'type'        => 'switch',
     'description' => 'Description',
-    'activated'   => 'on',
-    'desactivated'=> 'off',
+    'value_on'    => 'on',
+    'value_off'   => 'off',
     'value'       => $plugin->get_settings()['setting_switch_name'] ?? 'on',
   ]) ?>
 </div>
@@ -37,8 +37,8 @@
       'type'        => 'switch',
       'value'       => $value,
       'description' => 'Description',
-      'activated'   => 'on', // Optional, default on
-      'desactivated'=> 'off',  // Optional, default off
+      'value_on'    => 'on', // Optional, default on
+      'value_off'   => 'off',  // Optional, default off
     ]);
   </code> 
 </pre>
