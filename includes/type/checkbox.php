@@ -35,7 +35,6 @@
       'label'       => 'Checkbox field',
       'type'        => 'checkbox',
       'value'       => $value,
-      'placeholder' => 'Example placeholder',
       'description' => 'Example description'
     ]);
   </code>
