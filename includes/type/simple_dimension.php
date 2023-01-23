@@ -32,11 +32,10 @@
     $value = $plugin->get_settings()['setting_simple_dimension_name'] ?? '';
 
     $fields->render_field($name, [
-      'label'       => 'Simple Dimension field',
+      'label'       => 'Simple Dimension field', // Optional
       'type'        => 'simple_dimension',
-      'description' => 'Description',
+      'description' => 'Description', // Optional
       'units'       => [ 'px','vh','%','vw' ], // Optional, default px
-      'linked'      => true, // Optional, can be true, false or 'toggle', default 'toggle'
       'value'       => $value,
     ]);
   </code>
