@@ -50,6 +50,7 @@ $plugin->register_settings([
                 'number',
                 'radio',
                 'select',
+                'simple_dimension',
                 'switch',
                 'text',
                 'text_suggestion',
