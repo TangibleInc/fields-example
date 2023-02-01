@@ -11,7 +11,7 @@
       'placeholder' => 'Example placeholder',
       'description' => 'Example description',
       'rows' => 10,
-      'cols' => 15,
+      'cols' => 75,
       'resize' => 'horizontal'
     ] )
   ?>
@@ -43,7 +43,7 @@
       'placeholder' => 'Example placeholder',
       'description' => 'Example description',
       'rows' => 10,
-      'cols' => 15,
+      'cols' => 75,
       'resize' => 'horizontal'
     ] )
   </code>
