@@ -10,9 +10,14 @@
       'value' => $plugin->get_settings()['setting_text_name'] ?? '',
       'placeholder' => 'Example placeholder',
       'description' => 'Example description',
-      'rows' => 10,
-      'cols' => 75,
-      'resize' => 'horizontal'
+      'attributes' => [
+        'rows' => 10,
+        'cols' => 75,
+        'style' => [
+          'resize' => 'horizontal'
+        ],
+        'data-foo' => 'bar'
+      ]
     ] )
   ?>
 </div>
@@ -39,12 +44,17 @@
     echo $fields->render_field( $name, [
       'label' => 'Text Area',
       'type' => 'text_area',
-      'value' => $value,
+      'value' => $plugin->get_settings()['setting_text_name'] ?? '',
       'placeholder' => 'Example placeholder',
       'description' => 'Example description',
-      'rows' => 10,
-      'cols' => 75,
-      'resize' => 'horizontal'
+      'attributes' => [
+        'rows' => 10,
+        'cols' => 75,
+        'style' => [
+          'resize' => 'horizontal'
+        ],
+        'data-foo' => 'bar'
+      ]
     ] )
   </code>
 </pre>
