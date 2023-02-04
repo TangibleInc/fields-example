@@ -10,7 +10,10 @@ $plugin->register_settings([
       'title' => 'Example - PHP',
       'callback' => function($plugin_config, $settings, $settings_key) use ($framework, $fields, $plugin) {
 
-        $current_page = admin_url( sprintf('admin.php?%s', http_build_query($_GET)) ); ?>
+        $current_context = $_GET['context'] ?? 'default';
+        $current_page = admin_url( sprintf('admin.php?%s', http_build_query($_GET)) ); 
+        
+        $fields->set_context($current_context); ?>
         
         <style>
           .tangible-plugin-settings-tab { max-width: 100% !important; }
@@ -21,8 +24,35 @@ $plugin->register_settings([
           .tf-example-field { width: 80%; }
         </style>
 
+        <!-- Change context on select change -->
+        <script>
+          window.addEventListener('load', function() {
+            
+            const select = document.getElementById('tf-context-select')
+            
+            select.addEventListener('change', function() {
+
+              const url = new URL(location.href);
+              const params = new URLSearchParams(url.search)
+              params.set('context', select.value)
+
+              location.replace(location.protocol + '//' + location.host + location.pathname + '?' + params.toString())
+            })
+          })
+        </script>
+
         <div class="tf-example-container">
           <div class="tf-example-list">
+            <strong>Context</strong>
+            <div style="padding: 20px 0px">
+              <select id="tf-context-select">
+                <?php foreach( $fields->contexts as $context ): ?>
+                  <option value="<?= $context ?>" <?= $context === $current_context ? 'selected' : '' ?>>
+                    <?= ucfirst($context) ?>
+                  </option>
+                <?php endforeach; ?>
+              </select>
+            </div>
             <strong>Installation</strong>
             <ul>
               <?php foreach([
