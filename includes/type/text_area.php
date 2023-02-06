@@ -6,7 +6,7 @@
   <?=
     $fields->render_field( $plugin->get_settings_key(). '[setting_text_name]', [
       'label' => 'Text Area',
-      'type' => 'text_area',
+      'type' => 'textarea',
       'value' => $plugin->get_settings()['setting_text_name'] ?? '',
       'placeholder' => 'Example placeholder',
       'description' => 'Example description',
@@ -43,7 +43,7 @@
 
     echo $fields->render_field( $name, [
       'label' => 'Text Area',
-      'type' => 'text_area',
+      'type' => 'textarea',
       'value' => $plugin->get_settings()['setting_text_name'] ?? '',
       'placeholder' => 'Example placeholder',
       'description' => 'Example description',
