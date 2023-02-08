@@ -12,7 +12,11 @@
       'description' => 'Example description',
       'maxlength' => 150,
       'required' => false,
-      'rows' => 8
+      'rows' => 8,
+      'wrapper' => [
+        'data-foo' => 'bar',
+        'class' => 'foo-class'
+      ]
     ] )
   ?>
 </div>
@@ -44,7 +48,11 @@
       'description' => 'Example description',
       'maxlength' => 150,
       'required' => false,
-      'rows' => 8
+      'rows' => 8,
+      'wrapper' => [
+        'data-foo' => 'bar',
+        'class' => 'foo-class'
+      ]
     ] )
   </code>
 </pre>
