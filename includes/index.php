@@ -84,7 +84,8 @@ $plugin->register_settings([
                 'switch',
                 'text',
                 'text_suggestion',
-                'wysiwyg'
+                'wysiwyg',
+                'textarea'
               ] as $type): ?>
               <li style="<?= ($_GET['type'] ?? '') === $type ? 'font-weight: bold' : '' ?>">
                 <a href="<?= $current_page ?>&type=<?= $type ?>" ><?= $type ?></a>
