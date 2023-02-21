@@ -53,6 +53,16 @@ $plugin->register_settings([
                 <?php endforeach; ?>
               </select>
             </div>
+            <strong>Introduction</strong>
+            <ul>
+              <?php foreach([
+                'introduction/introduction',
+              ] as $type): ?>
+              <li style="<?= ($_GET['type'] ?? '') === $type ? 'font-weight: bold' : '' ?>">
+                <a href="<?= $current_page ?>&type=<?= $type ?>" ><?= str_replace( 'introduction/', '', $type) ?></a>
+              </li>
+              <?php endforeach; ?>
+            </ul>
             <strong>Installation</strong>
             <ul>
               <?php foreach([
