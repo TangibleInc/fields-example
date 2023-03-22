@@ -58,7 +58,7 @@ Possible format:
     $value = $plugin->get_settings()['setting_color_name'] ?? '';
 
     echo $fields->render_field( $name, [
-      'type'            => 'color',
+      'type'            => 'color_picker',
       'value'           => $value,
       'label'           => 'Color',
       'enable_opacity'  => true, // Optional, default true
