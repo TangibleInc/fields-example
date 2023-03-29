@@ -37,7 +37,7 @@
     'type' => 'border',
     'description' => 'Description',
     'enable_opacity' => true,
-    'linked' => false,
+    'linked' => true,
     'format' => 'hex',
     'units' => ['px', 'vh', '%', 'vw'],
     'value' => $plugin->get_settings()['setting_linked_opacity_border_name'] ?? '',
@@ -70,9 +70,9 @@
     'value'           => $value,
     'label'           => 'Border',
     'enable_opacity'  => true, // Optional, default true
-    'linked'      => 'toggle', // Optional, default toggle (use true or false to force value)
+    'linked'          => 'toggle', // Optional, default toggle (use true or false to force value)
     'format'          => 'rgba', // hex, rgb, hsl
-    'units' => ['px', 'vh', '%', 'vw'], // Optional, default px
+    'units'           => ['px', 'vh', '%', 'vw'], // Optional, default px
     'description'     => 'Example description' 
   ]);
   </code>
