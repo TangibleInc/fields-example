@@ -1,4 +1,4 @@
-<h3>Dynamic attributes - Repeater context</h3>
+<h3>Dependent attributes - Repeater context</h3>
 
 There is the possibility to set the attribute value of a field based of another field value.<br />
 For now, it works only inside a repeater but we can imagine doing this in other context in the future (in a popup, or a from for example).<br />
@@ -22,7 +22,7 @@ In this example:
 
 <div class="tangible-settings-row">
   <?= $fields->render_field($plugin->get_settings_key() . '[setting_repeater_context_name]', [
-    'label'      => 'Repeater with dynamic attributes',
+    'label'      => 'Repeater with dependent attributes',
     'type'       => 'repeater',
     'layout'     => 'block',
     'value'      => $plugin->get_settings()['setting_repeater_context_name'] ?? false,

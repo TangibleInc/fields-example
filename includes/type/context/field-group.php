@@ -1,4 +1,4 @@
-<h3>Dynamic attributes - Field group</h3>
+<h3>Dependent attributes - Field group</h3>
 
 See repeater context to explanations.
 

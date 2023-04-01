@@ -116,7 +116,7 @@ $plugin->register_settings([
               </li>
               <?php endforeach; ?>
             </ul>
-            <strong>Dynamic attributes</strong>
+            <strong>Dependent attributes</strong>
             <ul>
               <?php foreach([
                 'context/repeater',
