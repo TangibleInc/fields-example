@@ -76,6 +76,7 @@ $plugin->register_settings([
             <strong>Fields</strong>
             <ul>
               <?php foreach([
+                'accordion',
                 'border',
                 'button_group',
                 'checkbox',
