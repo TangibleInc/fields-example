@@ -77,6 +77,7 @@ $plugin->register_settings([
             <ul>
               <?php foreach([
                 'accordion',
+                'alignment_matrix',
                 'border',
                 'button_group',
                 'checkbox',
