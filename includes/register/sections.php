@@ -253,6 +253,28 @@ $documentation->register_section('repeater', [
   ]
 ]);
 
+$documentation->register_section('field-visibility', [
+  'title' => 'Fields visibility conditions',
+  'pages' => [
+    'syntax' => [
+      'title' => 'Syntax',
+      'path'  => 'visibility/syntax'
+    ],
+    'operators' => [
+      'title' => 'Operators',
+      'path'  => 'visibility/operators',
+    ],
+    'example' => [
+      'title' => 'Example',
+      'path'  => 'visibility/example',
+      'fields'=>[
+        'visibility-text'     => [],
+        'visibility-repeater' => [ 'json' => true ]
+      ]
+    ]
+  ]
+]);
+
 $documentation->register_section('dependent-attributes', [
   'title' => 'Dependent attributes',
   'pages' => [
