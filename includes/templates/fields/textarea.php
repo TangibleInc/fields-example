@@ -9,6 +9,7 @@
       'placeholder' => 'Example placeholder',
       'description' => 'Example description',
       'maxlength'   => 150,
+      'minlength'   => 10,
       'required'    => false,
       'rows'        => 8,
       'wrapper'     => [
@@ -43,6 +44,7 @@
       'placeholder' => 'Example placeholder',
       'description' => 'Example description',
       'maxlength'   => 150,
+      'minlength'   => 10,
       'required'    => false,
       'rows'        => 8,
       'wrapper'     => [
