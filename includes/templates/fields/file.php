@@ -17,6 +17,22 @@ By default, all the mime types from this function are allowed: <a href="https://
   <?php submit_button() ?>
 </div>
 
+<h4>Example of using stock file input field</h4>
+
+<div class="tangible-settings-row">
+  <?= $fields->render_field('file_input', [
+    'label'       => 'File',
+    'type'        => 'file',
+    'description' => 'Description',
+    'value'       => $fields->fetch_value('file_input'),
+    'wp_media'    => false
+  ]) ?>
+</div>
+
+<div class="tangible-settings-row">
+  <?php submit_button() ?>
+</div>
+
 <h4>Example of wp_media enabled and shortcut for mimetypes</h4>
 
 <div class="tangible-settings-row">
@@ -25,7 +41,6 @@ By default, all the mime types from this function are allowed: <a href="https://
     'type'        => 'file',
     'description' => 'Description',
     'value'       => $fields->fetch_value('file_wp_media'),
-    'wp_media'    => true,
     'mime_types'  => [
         'video',
         'image', 
@@ -78,6 +93,7 @@ By default, all the mime types from this function are allowed: <a href="https://
 
 <?php tangible()->see(
   $fields->fetch_value('file'),
+  $fields->fetch_value('file_input'),
   $fields->fetch_value('file_wp_media'),
   $fields->fetch_value('file_image'),
   $fields->fetch_value('file_limited')
@@ -96,7 +112,8 @@ By default, all the mime types from this function are allowed: <a href="https://
       'description' => 'Description',
       'value'       => $fields->fetch_value('name'),
       'max_upload'  => 5,
-      'wp_media'    => true,
+      // You can disable wp_media to use the file input field instead of WP media.
+      'wp_media'    => false,
       'mime_types'  => [
         // you can include them by shortcut or by specific mime type
         'video',
