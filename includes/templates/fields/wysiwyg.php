@@ -1,3 +1,10 @@
+We support two options for the editor: ProseMirror and TinyMCE.
+
+<ul>
+  <li> ProseMirror: default editor </li>
+  <li> TinyMce: to use TinyMce editor, set the parameter 'editor' to 'editor' => 'tinymce' </ul>
+</ul>
+
 <h4>Example</h4>
 
 <div class="tangible-settings-row">
@@ -5,6 +12,7 @@
     'label'       => 'Editor field',
     'type'        => 'wysiwyg',
     'value'       => $fields->fetch_value('wysiwyg'),
+    'editor'      => 'tinymce',
     'placeholder' => 'Example placeholder',
     'description' => 'Example description'
   ]) ?>
@@ -31,6 +39,7 @@
       'label'       => 'Editor field',
       'type'        => 'wysiwyg',
       'value'       => $fields->fetch_value('name'),
+      'editor'      => 'tinymce',
       'placeholder' => 'Example placeholder',
       'description' => 'Example description'
     ]);
