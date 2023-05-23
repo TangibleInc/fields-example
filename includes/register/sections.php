@@ -54,6 +54,13 @@ $documentation->register_section('fields', [
         'alignment_matrix' => []
       ]
     ],
+    'angle_picker' => [
+      'title' => 'Angle picker',
+      'path'  => 'fields/angle-picker',
+      'fields'=> [
+        'angle_picker' => [],
+      ]
+    ],
     'border' => [
       'title' => 'Border',
       'path'  => 'fields/border',
