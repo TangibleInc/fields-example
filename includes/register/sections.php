@@ -243,9 +243,10 @@ $documentation->register_section('repeater', [
       'title' => 'Block',
       'path'  => 'repeater/block',
       'fields'=> [
-        'repeater_block'                => [ 'json' => true ],
-        'repeater_block_non_repeatable' => [ 'json' => true ],
-        'repeater_block_max'            => [ 'json' => true ]
+        'repeater_block'                    => [ 'json' => true ],
+        'repeater_block_non_repeatable'     => [ 'json' => true ],
+        'repeater_block_max'                => [ 'json' => true ],
+        'repeater_block_bulk_switch_title'  => [ 'json' => true ]
       ]
     ],
     'table' => [
