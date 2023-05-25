@@ -5,13 +5,29 @@ We support two options for the editor: ProseMirror and TinyMCE.
   <li> TinyMce: to use TinyMce editor, set the parameter 'editor' to 'editor' => 'tinymce' </ul>
 </ul>
 
-<h4>Example</h4>
+<h4>Example - ProseMirror</h4>
 
 <div class="tangible-settings-row">
   <?= $fields->render_field('wysiwyg', [
     'label'       => 'Editor field',
     'type'        => 'wysiwyg',
     'value'       => $fields->fetch_value('wysiwyg'),
+    'placeholder' => 'Example placeholder',
+    'description' => 'Example description'
+  ]) ?>
+</div>
+
+<div class="tangible-settings-row">
+  <?php submit_button() ?>
+</div>
+
+<h4>Example - TinyMce</h4>
+
+<div class="tangible-settings-row">
+  <?= $fields->render_field('wysiwyg-tinymce', [
+    'label'       => 'Editor field',
+    'type'        => 'wysiwyg',
+    'value'       => $fields->fetch_value('wysiwyg-tinymce'),
     'editor'      => 'tinymce',
     'placeholder' => 'Example placeholder',
     'description' => 'Example description'
@@ -25,7 +41,8 @@ We support two options for the editor: ProseMirror and TinyMCE.
 <h4>Value</h4>
 
 <?php tangible()->see(
-  $fields->fetch_value('wysiwyg')
+  $fields->fetch_value('wysiwyg'),
+  $fields->fetch_value('wysiwyg-tinymce')
 ); ?>
 
 <h4>Code</h4>
