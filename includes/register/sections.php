@@ -231,7 +231,8 @@ $documentation->register_section('fields', [
       'title' => 'WYSIWYG',
       'path'  => 'fields/wysiwyg',
       'fields'=> [
-        'wysiwyg' => []
+        'wysiwyg'         => [],
+        'wysiwyg-tinymce' => []
       ]
     ]
   ]
