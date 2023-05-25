@@ -139,6 +139,7 @@ $documentation->register_section('fields', [
       'path'  => 'fields/file',
       'fields'=> [
         'file'          => [],
+        'file_input'    => [],
         'file_wp_media' => [],
         'file_image'    => [],
         'file_limited'  => []
