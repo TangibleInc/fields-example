@@ -26,11 +26,11 @@
     $fields = tangible_fields();
     <?php $plugin->render_registation_message(); ?>
 
-    echo $fields->render_field('name', [
-      'label'      => 'Accordion',
-      'type'       => 'accordion',
+    echo $fields->render_field('alignment_matrix', [
+      'label'      => 'Alignment Matrix',
+      'type'       => 'alignment_matrix',
       'description'=> 'Description',
-      'value'      => $fields->fetch_value('name'),
+      'value'      => $fields->fetch_value('alignment_matrix'),
     ]);
   </code>
 </pre>
