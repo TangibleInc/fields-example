@@ -11,6 +11,9 @@
 
 <?php tangible()->see(
   $fields->fetch_value('dynamic-text'),
+  $fields->render_value(
+    $fields->fetch_value('dynamic-text')
+  ),
 ); ?>
 
 <div class="tangible-settings-row">
@@ -30,6 +33,9 @@
 
 <?php tangible()->see(
   $fields->fetch_value('dynamic-color'),
+  $fields->render_value(
+    $fields->fetch_value('dynamic-color')
+  ),
 ); ?>
 
 <div class="tangible-settings-row">
@@ -49,6 +55,9 @@
 
 <?php tangible()->see(
   $fields->fetch_value('dynamic-date'),
+  $fields->render_value(
+    $fields->fetch_value('dynamic-date')
+  ),
 ); ?>
 
 <div class="tangible-settings-row">
@@ -68,6 +77,9 @@
 
 <?php tangible()->see(
   $fields->fetch_value('dynamic-number'),
+  $fields->render_value(
+    $fields->fetch_value('dynamic-number')
+  ),
 ); ?>
 
 <div class="tangible-settings-row">
