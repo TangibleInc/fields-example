@@ -11,7 +11,7 @@
   ],
   "require": {
     "tangible/plugin-framework": "dev-variant/without-updater",
-    "tangible/fields": "dev-feature/dynamic-values-backend"
+    "tangible/fields": "dev-main"
   },
   "require-dev": {},
   "minimum-stability": "dev"
