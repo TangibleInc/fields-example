@@ -309,7 +309,7 @@ $documentation->register_section('dynamic-values', [
   'title' => 'Dynamic values',
   'pages' => [
     'index' => [
-      'title'  => 'Example',
+      'title'  => 'Add support',
       'path'   => 'dynamic-values/index',
       'fields' => [
         'dynamic-text'   => [ 'json' => true ],
@@ -317,6 +317,10 @@ $documentation->register_section('dynamic-values', [
         'dynamic-date'   => [],
         'dynamic-number' => [],
       ]
-    ]
+    ],
+    'registration' => [
+      'title' => 'Registration',
+      'path'  => 'dynamic-values/registration'
+    ] 
   ]
 ]);

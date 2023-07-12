@@ -14,7 +14,13 @@
 
   .tf-example-field > ul { 
     list-style: circle; 
-    padding: 10px; 
+    padding: 10px;
+
+    ul {
+      list-style: square; 
+      padding: 5px;
+      padding-left: 40px;
+    }
   }
 
   .tf-example-list { 

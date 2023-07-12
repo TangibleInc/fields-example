@@ -1,3 +1,30 @@
+<h4>Activate on a field</h4>
+
+To add support for dynamic values on a field, we need to add <code>'dynamic' => true</code> in the field definition.
+
+It will only works with the supported field types (more to come):
+<ul>
+  <li>color_picker</li>
+  <li>date_picker</li>
+  <li>number</li>
+  <li>text</li>
+</ul>
+
+<pre>
+  <code>
+    $fields = tangible_fields();
+    
+    $fields->render_field('text-with-dynamic-values', [
+      'label'   => 'Text field with dynamic values',
+      'type'    => 'text',
+      'value'   => $fields->fetch_value('text-with-dynamic-values'),
+      'dynamic' => true
+    ]);
+  </code>
+</pre>
+
+<h4>Examples</h4>
+
 <div class="tangible-settings-row">
   <?= $fields->render_field('dynamic-text', [
     'label'       => 'Text field',
@@ -10,8 +37,8 @@
 </div>
 
 <?php tangible()->see(
-  $fields->fetch_value('dynamic-text'),
-  $fields->render_value(
+  'Raw value: ' . $fields->fetch_value('dynamic-text'),
+  'Parsed value: ' . $fields->render_value(
     $fields->fetch_value('dynamic-text')
   ),
 ); ?>
@@ -32,8 +59,8 @@
 </div>
 
 <?php tangible()->see(
-  $fields->fetch_value('dynamic-color'),
-  $fields->render_value(
+  'Raw value: ' . $fields->fetch_value('dynamic-color'),
+  'Parsed value: ' . $fields->render_value(
     $fields->fetch_value('dynamic-color')
   ),
 ); ?>
@@ -54,8 +81,8 @@
 </div>
 
 <?php tangible()->see(
-  $fields->fetch_value('dynamic-date'),
-  $fields->render_value(
+  'Raw value: ' . $fields->fetch_value('dynamic-date'),
+  'Parsed value: ' . $fields->render_value(
     $fields->fetch_value('dynamic-date')
   ),
 ); ?>
@@ -76,8 +103,8 @@
 </div>
 
 <?php tangible()->see(
-  $fields->fetch_value('dynamic-number'),
-  $fields->render_value(
+  'Raw value: ' . $fields->fetch_value('dynamic-number'),
+  'Parsed value: ' . $fields->render_value(
     $fields->fetch_value('dynamic-number')
   ),
 ); ?>
