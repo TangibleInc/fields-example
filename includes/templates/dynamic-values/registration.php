@@ -26,8 +26,8 @@
       'name'     => 'post_id',
       'label'    => 'Post ID',
       'type'     => 'text',
-      'callback' => function() {
-        return get_the_ID();
+      'callback' => function($settings, $config) {
+        return $config['context']['current_post_id'];
       },
       'permission_callback' => '__return_true'
     ]);
@@ -120,10 +120,12 @@ The user will be able to set the value for each setting on the dynamic value ins
           ]
         ]
       ],
-      'callback' => function($settings) {
+      'callback' => function($settings, $config) {
 
         $format = $settings['format'] ?? 'none';
-        $post_title = get_the_title();
+        $post_title = get_the_title(
+          $config['context']['current_post_id']
+        );
 
         if( $format === 'lowercase' ) return strtolower($post_title);
         if( $format === 'uppercase' ) return strtoupper($post_title);

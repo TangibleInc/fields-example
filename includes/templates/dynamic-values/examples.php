@@ -1,29 +1,4 @@
-<h4>Activate on a field</h4>
-
-To add support for dynamic values on a field, we need to add <code>'dynamic' => true</code> in the field definition.
-
-It will only works with the supported field types (more to come):
-<ul>
-  <li>color_picker</li>
-  <li>date_picker</li>
-  <li>number</li>
-  <li>text</li>
-</ul>
-
-<pre>
-  <code>
-    $fields = tangible_fields();
-    
-    $fields->render_field('text-with-dynamic-values', [
-      'label'   => 'Text field with dynamic values',
-      'type'    => 'text',
-      'value'   => $fields->fetch_value('text-with-dynamic-values'),
-      'dynamic' => true
-    ]);
-  </code>
-</pre>
-
-<h4>Examples</h4>
+<h4>Text</h4>
 
 <div class="tangible-settings-row">
   <?= $fields->render_field('dynamic-text', [
@@ -47,6 +22,8 @@ It will only works with the supported field types (more to come):
   <?php submit_button() ?>
 </div>
 
+<h4>Color</h4>
+
 <div class="tangible-settings-row">
   <?= $fields->render_field('dynamic-color', [
     'label'       => 'Color field',
@@ -69,6 +46,8 @@ It will only works with the supported field types (more to come):
   <?php submit_button() ?>
 </div>
 
+<h4>Date</h4>
+
 <div class="tangible-settings-row">
   <?= $fields->render_field('dynamic-date', [
     'label'       => 'Date field',
@@ -90,6 +69,8 @@ It will only works with the supported field types (more to come):
 <div class="tangible-settings-row">
   <?php submit_button() ?>
 </div>
+
+<h4>Number</h4>
 
 <div class="tangible-settings-row">
   <?= $fields->render_field('dynamic-number', [

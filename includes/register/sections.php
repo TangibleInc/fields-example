@@ -308,19 +308,23 @@ $documentation->register_section('dependent-attributes', [
 $documentation->register_section('dynamic-values', [
   'title' => 'Dynamic values',
   'pages' => [
-    'index' => [
-      'title'  => 'Add support',
-      'path'   => 'dynamic-values/index',
+    'usage' => [
+      'title'  => 'Usage',
+      'path'   => 'dynamic-values/usage',
+    ],
+    'registration' => [
+      'title' => 'Registration',
+      'path'  => 'dynamic-values/registration'
+    ],
+    'examples' => [
+      'title'  => 'Examples',
+      'path'   => 'dynamic-values/examples',
       'fields' => [
         'dynamic-text'   => [ 'json' => true ],
         'dynamic-color'  => [],
         'dynamic-date'   => [],
         'dynamic-number' => [],
       ]
-    ],
-    'registration' => [
-      'title' => 'Registration',
-      'path'  => 'dynamic-values/registration'
-    ] 
+    ]
   ]
 ]);
