@@ -11,6 +11,14 @@
     {
       "type": "vcs",
       "url": "git@bitbucket.org:/tangibleinc/tangible-fields-pro-module.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@bitbucket.org:/tangibleinc/betterdash-module.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@bitbucket.org:/tangibleinc/populater-module.git"
     }
   ],
   "require": {
