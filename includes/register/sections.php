@@ -288,18 +288,18 @@ $documentation->register_section('field-visibility', [
 $documentation->register_section('dependent-attributes', [
   'title' => 'Dependent attributes',
   'pages' => [
-    'repeater' => [
-      'title' => 'Repeater',
-      'path'  => 'dependent-attributes/repeater',
-      'fields'=> [
-        'dynamic_attribute_repeater' => [ 'json' => true ]
-      ]
+    'syntax' => [
+      'title' => 'Syntax',
+      'path'  => 'dependent-attributes/syntax',
+      'fields' => []
     ],
-    'fields_group' => [
-      'title' => 'Field groups',
-      'path'  => 'dependent-attributes/field-group',
+    'exmaple' => [
+      'title' => 'Example',
+      'path'  => 'dependent-attributes/example',
       'fields'=> [
-        'dynamic_attribute_field_group' => [ 'json' => true ]
+        'dependent-color-switch' => [],
+        'dependent-color-picker' => [],
+        'dependent-attribute-repeater' => [ 'json' => true ]
       ]
     ]
   ]
