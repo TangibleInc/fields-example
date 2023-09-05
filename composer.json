@@ -7,11 +7,24 @@
     {
       "type": "vcs",
       "url": "git@bitbucket.org:/tangibleinc/tangible-fields-module.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@bitbucket.org:/tangibleinc/tangible-fields-pro-module.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@bitbucket.org:/tangibleinc/betterdash-module.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@bitbucket.org:/tangibleinc/populater-module.git"
     }
   ],
   "require": {
     "tangible/plugin-framework": "dev-variant/without-updater",
-    "tangible/fields": "dev-main"
+    "tangible/fields": "dev-main",
+    "tangible/fields-pro": "dev-main"
   },
   "require-dev": {},
   "minimum-stability": "dev"
