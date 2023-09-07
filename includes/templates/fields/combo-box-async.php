@@ -1,6 +1,77 @@
 While the control looks the same regardless of if it uses static or async data, the returned value will be different.<br />
 In the case of an async combobox, it will be a json object with both the value and the labe (instead of a string with the value).
 
+<h4>Map results</h4>
+
+<p>The optional <code>map_results</code> attribute allows you to configure how data from asynchronous sources is mapped to the <code>id</code> and <code>title</code> attributes of the ComboBox options.</p> 
+<p>This mapping is crucial if the endpoint/ajax action you are using doesn't return objects with a <code>title</code> and an <code>id</code> keys.</p>
+
+<p>For example, if the returned data for a given endpoint is this JSON:</p>
+<pre>
+  <code>
+    [
+      { label: 'First', uuid: '1' },
+      { label: 'Second', uuid: '2' }
+    ]
+  </code>
+</pre>
+
+<p>We will want to use label as the title, and uuid as the id.</p>
+<p>In order to do that, we can will have to set <code>map_results</code> like this:</p>
+<pre>
+  <code>
+    echo $fields->render_field('name', [
+      'type'  => 'combo_box',
+      // ...
+      'map_results' => [
+        'id'    => 'uuid'
+        'title' => 'label'
+      ]
+    ]);
+  </code>
+</pre>
+
+<p>It is also possible to get data from an object, for example with this response:</p>
+<pre>
+  <code>
+    [
+      { 
+        uuid: '1',
+        data: {
+          title: 'Fist',
+          content: 'First content'
+        } 
+      },
+      { 
+        uuid: '2',
+        data: {
+          title: 'Second',
+          content: 'Second content'
+        } 
+      }
+  ] 
+  </code>
+</pre>
+
+<p>We can use the following <code>map_results</code>:</p>
+<pre>
+  <code>
+    echo $fields->render_field('name', [
+      'type'  => 'combo_box',
+      // ...
+      'map_results' => [
+        'id'    => 'uuid'
+        'title' => [
+          'key'       => 'data',
+          'attribute' => 'title',
+        ]
+      ]
+    ]);
+  </code>
+</pre>
+
+<p>Currently, it won't work with nested objects.</p>
+
 <h4>Example with async loading (using a fetch url)</h4>
 
 <div class="tangible-settings-row">
