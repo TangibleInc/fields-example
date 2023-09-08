@@ -328,3 +328,13 @@ $documentation->register_section('dynamic-values', [
     ]
   ]
 ]);
+
+$documentation->register_section('javascript', [
+  'title' => 'JavaScript API',
+  'pages' => [
+    'store' => [
+      'title'  => 'Store',
+      'path'   => 'javascript/store'
+    ]
+  ]
+]);
