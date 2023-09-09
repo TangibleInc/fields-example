@@ -15,11 +15,11 @@
 
 <h4 id="listen">Listen to en event</h4>
 
-<p>To listen to a event fields event, you can use the <code>event</code> method from <code>tangibleFields</code>.</p>
+<p>To listen to a fields event, you can use the <code>event</code> method from <code>tangibleFields</code>.</p>
 <p>It take two arguments:</p>
 <ul>
   <li><code>eventName</code>: The name of the event</li>
-  <li><code>eventCallback</code>:A callback function that will be executed when the specified event is triggered. It receives two parameters:</li>
+  <li><code>eventCallback</code>: A callback function that will be executed when the specified event is triggered. It receives two parameters:</li>
   <ul>
     <li><code>eventData</code>: An object containing any additional data or arguments passed when triggering the event</li>
     <li><code>event</code>: The event object itself</li>
@@ -28,7 +28,7 @@
 
 <pre>
   <code>
-    // The callback will be called each time any field value change
+    // The callback will be called each time any value change
     tangibleFields.event('valueChange', (field, event) => {
       
       if( field.name !== 'field-name' ) return;
@@ -55,7 +55,7 @@
 
 <h4 id="trigger">Trigger an event</h4>
 
-<p>To trigger fields events, you can use the <code>trigger</code> method from <code>tangibleFields</code>.</p>
+<p>To trigger a fields event, you can use the <code>trigger</code> method from <code>tangibleFields</code>.</p>
 <p>It take two arguments:</p>
 <ul>
   <li><code>eventName</code>: The name of the event</li>
@@ -64,16 +64,11 @@
 
 <pre>
   <code>
-    // Triggering this event will change the value of a given field and force a re-render
-    tangibleFields.trigger('refreshFieldValue', {
-      name  : name,
-      value : value
-    })
+    tangibleFields.trigger('myCustomEvent', args)
   </code>
 </pre>
 
 <h4 id="events">Event list</h4>
-
 <ul>
   <li>
     <h5 id="init-field">initField</h4>
@@ -87,7 +82,7 @@
   </li>
   <li>
     <h5 id="value-change">valueChange</h4>
-    <p>Triggered each time a field value change. Is also triggered from subfields from repeaters and field-groups.</p>
+    <p>Triggered each time a field value change. Is also triggered for subfields from repeaters and field-groups.</p>
     <pre><code>
       tangibleFields.event('valueChange', field => {
 

@@ -3,7 +3,7 @@
 
 <pre>
   <code>
-    const store = window.tangibleFields.store
+    const store = tangibleFields.store
   </code>
 </pre>
 

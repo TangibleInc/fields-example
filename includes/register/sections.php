@@ -266,6 +266,10 @@ $documentation->register_section('repeater', [
 $documentation->register_section('javascript', [
   'title' => 'JavaScript API',
   'pages' => [
+    'render' => [
+      'title'  => 'Render',
+      'path'   => 'javascript/render'
+    ],
     'event' => [
       'title'  => 'Events',
       'path'   => 'javascript/events'
