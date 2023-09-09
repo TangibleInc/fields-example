@@ -263,6 +263,20 @@ $documentation->register_section('repeater', [
   ]
 ]);
 
+$documentation->register_section('javascript', [
+  'title' => 'JavaScript API',
+  'pages' => [
+    'event' => [
+      'title'  => 'Events',
+      'path'   => 'javascript/events'
+    ],
+    'store' => [
+      'title'  => 'Store',
+      'path'   => 'javascript/store'
+    ]
+  ]
+]);
+
 $documentation->register_section('field-visibility', [
   'title' => 'Fields visibility conditions',
   'pages' => [
@@ -325,16 +339,6 @@ $documentation->register_section('dynamic-values', [
         'dynamic-date'   => [],
         'dynamic-number' => [],
       ]
-    ]
-  ]
-]);
-
-$documentation->register_section('javascript', [
-  'title' => 'JavaScript API',
-  'pages' => [
-    'store' => [
-      'title'  => 'Store',
-      'path'   => 'javascript/store'
     ]
   ]
 ]);
