@@ -14,4 +14,19 @@ window.addEventListener('load', () => {
 
     location.replace(location.protocol + '//' + location.host + location.pathname + '?' + params.toString())
   })
+
+  /**
+   * Specific to dynamic value list page - Handle list selection
+   */
+  const trigger = document.getElementsByClassName('tf-dynamic-value-trigger-js')
+  const content = document.getElementsByClassName('tf-dynamic-value-content-js')
+
+  if( trigger.length === 0 ) return;
+
+  for (let i = 0; i < trigger.length; i++) {
+    trigger[i].addEventListener('click', () => {
+      jQuery('.tf-dynamic-value-content-js').attr('style', 'display: none')
+      content[i].setAttribute('style', '')
+    })
+  }
 })

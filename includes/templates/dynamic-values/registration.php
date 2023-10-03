@@ -22,11 +22,12 @@
     $fields = tangible_fields();
     
     $fields->register_dynamic_value([
-      'category' => 'post',
-      'name'     => 'post_id',
-      'label'    => 'Post ID',
-      'type'     => 'text',
-      'callback' => function($settings, $config) {
+      'category'    => 'post',
+      'name'        => 'post_id',
+      'label'       => 'Post ID',
+      'type'        => 'text',
+      'description' => 'Return the current post ID, if any',
+      'callback'    => function($settings, $config) {
         return $config['context']['current_post_id'];
       },
       'permission_callback' => '__return_true'
@@ -39,6 +40,7 @@
   <li>category (required): Slug of the associated category</li>
   <li>name (required): Slug of the dynamic value</li>
   <li>label: If not defined, name will be use as the label</li>
+  <li>description: Optional description that will be used both in the documentation and in the dynamic setting form (if there is one for this dynamic value)</li>
   <li>type: The type of data returned by the callback, possible values:
     <ul>
       <li>color</li>

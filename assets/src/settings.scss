@@ -12,7 +12,8 @@
     display: flex; 
   }
 
-  .tf-example-field > ul { 
+  .tf-example-field > ul,
+  .tf-dynamic-value-content-js ul { 
     list-style: circle; 
     padding: 10px;
 
@@ -36,6 +37,34 @@
     padding: 20px 0px;
   }
 
+  .tf-dynamic-value-content-js {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .tf-dynamic-value-description {
+    padding-bottom: 10px;
+  }
+
+  .tf-dynamic-value-list {
+    display: flex;
+  }
+
+  .tf-dynamic-value-list-sidebar {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tf-dynamic-value-list-content {
+    display: flex; 
+    flex-direction: column;
+  }
+
+  .tf-dynamic-value-trigger-js {
+    cursor: pointer;
+  }
 }
 
 

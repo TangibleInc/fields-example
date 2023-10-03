@@ -334,6 +334,10 @@ $documentation->register_section('dynamic-values', [
       'title' => 'Registration',
       'path'  => 'dynamic-values/registration'
     ],
+    'list' => [
+      'title' => 'List',
+      'path'  => 'dynamic-values/list'
+    ],
     'examples' => [
       'title'  => 'Examples',
       'path'   => 'dynamic-values/examples',

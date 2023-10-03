@@ -3,13 +3,13 @@
  * Plugin Name: Tangible Field Example
  * Plugin URI: https://tangibleplugins.com/tangible-field-example
  * Description: 
- * Version: 0.0.2
+ * Version: 0.0.3
  * Author: Team Tangible
  * Author URI: https://teamtangible.com
  * License: GPLv2 or later
  */
 
-define( 'TANGIBLE_FIELD_EXAMPLE_VERSION', '0.0.2' );
+define( 'TANGIBLE_FIELD_EXAMPLE_VERSION', '0.0.3' );
 
 require_once __DIR__ . '/vendor/tangible/plugin-framework/index.php';
 require_once __DIR__ . '/vendor/tangible/fields/index.php';
