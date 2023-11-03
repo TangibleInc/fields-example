@@ -350,3 +350,13 @@ $documentation->register_section('dynamic-values', [
     ]
   ]
 ]);
+
+$documentation->register_section('context', [
+  'title' => 'Style contex',
+  'pages' => [
+    'usage' => [
+      'title'  => 'Usage',
+      'path'   => 'context/usage',
+    ]
+  ]
+]);
