@@ -20,6 +20,29 @@
   $fields->fetch_value('text')
 ); ?>
 
+<h4>Example with readOnly</h4>
+
+<div class="tangible-settings-row">
+  <?= $fields->render_field('text-read-only', [
+    'label'       => 'Text field',
+    'type'        => 'text',
+    'value'       => $fields->fetch_value('text-read-only'),
+    'placeholder' => 'Example placeholder',
+    'description' => 'Example description',
+    'read_only'   => true
+  ]) ?>
+</div>
+
+<div class="tangible-settings-row">
+  <?php submit_button() ?>
+</div>
+
+<h4>Value</h4>
+
+<?php tangible()->see(
+  $fields->fetch_value('text-read-only')
+); ?>
+
 <h4>Code</h4>
 
 <pre>

@@ -209,7 +209,8 @@ $documentation->register_section('fields', [
       'title' => 'Text',
       'path'  => 'fields/text',
       'fields'=> [
-        'text' => []
+        'text'           => [],
+        'text-read-only' => [],
       ]
     ],
     'text_suggestion' => [
