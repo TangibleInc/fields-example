@@ -7,30 +7,28 @@
 
 <p>To generate a field, we pass a field name and a configuration array to the <code>render_field()</code> method, which return an empty <code><?= htmlentities('<div>') ?></code> element with a unique ID:</p>
 
-<pre>
+<?php $this->start_code('php') ?>
+$fields = tangible_fields();
 
-  $fields = tangible_fields();
-
-  $field_html = $fields->render_field('field_name', 
-    [
-      'label'       => 'Text field',
-      'type'        => 'text',
-      'value'       => '',
-      'placeholder' => 'Example placeholder',
-      'description' => 'Example description'
-    ]
-  );
-
-</pre>
+$field_html = $fields->render_field('field_name', 
+  [
+    'label'       => 'Text field',
+    'type'        => 'text',
+    'value'       => '',
+    'placeholder' => 'Example placeholder',
+    'description' => 'Example description'
+  ]
+);
+<?php $this->end_code() ?>
 
 <p>In this example, the value of <code>$field_html</code> will be something like this:</p> 
 
-<pre>
-  <?= htmlentities('<div id="field_name-63f4729c357e4"></div>') ?>
-</pre>
+<?php $this->start_code('php') ?>
+<div id="field_name-63f4729c357e4"></div>
+<?php $this->end_code() ?>
 
 <p>The module keeps track of which field name/configuration is associated to which <code><?= htmlentities('<div>') ?></code> thanks to the id and passes all data (div id + field configuration) to the frontend. The appropriate React component is then initialized inside the correct <code><?= htmlentities('<div>') ?></code> based on this.</p>
-<p>Each field type is linked to a react component. You can see which field type is associated with which component in the <a href="https://bitbucket.org/tangibleinc/tangible-fields-module/src/main/assets/src/controls-list.js">controls-list.js file</a>.</p> 
+<p>Each field type is linked to a react component. You can see which field type is associated with which component in the <a href="https://bitbucket.org/tangibleinc/tangible-fields-module/src/main/assets/src/types.js">types.js file</a>.</p> 
 <p>When a field is initialized, the associated config is passed to the component as react props.</p>
 <p>To generate the JS/CSS build file, we use an internal tool called Tangible Roller (the documentation can be found <a href="https://develop.tangible.one/tools/roller">here</a>).</p>
 

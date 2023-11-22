@@ -278,6 +278,13 @@ $documentation->register_section('javascript', [
     'store' => [
       'title'  => 'Store',
       'path'   => 'javascript/store'
+    ],
+    'types' => [
+      'title'  => 'Custom field type',
+      'path'   => 'javascript/types',
+      'fields' => [
+        'custom-field-example' => [ 'json' => true ]
+      ]
     ]
   ]
 ]);

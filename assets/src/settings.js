@@ -1,3 +1,5 @@
+import { initExample } from './example/register-custom-type'
+
 /**
  * Settings page: Change context on select change
  */
@@ -14,6 +16,11 @@ window.addEventListener('load', () => {
 
     location.replace(location.protocol + '//' + location.host + location.pathname + '?' + params.toString())
   })
+
+  /**
+   * Example for custom field type registration
+   */
+  if( document.getElementById('tf-example-custom-types') ) initExample()
 
   /**
    * Specific to dynamic value list page - Handle list selection

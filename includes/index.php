@@ -7,6 +7,7 @@ defined('ABSPATH') or die();
 require_once __DIR__ . '/ajax/index.php';
 require_once __DIR__ . '/Documentation.php';
 require_once __DIR__ . '/register/index.php';
+require_once __DIR__ . '/enqueue.php';
 
 $plugin->register_settings([
   'css'  => $plugin->assets_url . '/build/settings.min.css',
@@ -17,6 +18,7 @@ $plugin->register_settings([
       'callback' => function($plugin_config, $settings, $settings_key) use ($framework, $fields, $plugin) {
 
         $documentation = Documentation::$instance;
+        $plugin->enqueue();
 
         $page = $_GET['type'] ?? false;
         $section = $_GET['section'] ?? false;
@@ -31,6 +33,7 @@ $plugin->register_settings([
         $fields->set_context($current_context); 
         
         ?>
+        <script>window.addEventListener('load', () => hljs.highlightAll())</script>
         <div class="tf-example-container">
           
           <!-- Sidebar -->

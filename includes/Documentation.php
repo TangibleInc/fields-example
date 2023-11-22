@@ -46,6 +46,17 @@ class Documentation {
     require_once __DIR__ . '/templates/' . $page['path'] . '.php';
   }
 
+  function start_code($language = 'php') {
+    ?><pre><code class="language-<?= esc_attr($language) ?>"><?php
+    ob_start();    
+  }
+
+  function end_code() {
+    $code_sample = ob_get_clean();
+    echo htmlentities($code_sample);
+    ?></code></pre><?php
+  }
+
 }
 
 Documentation::$instance = new Documentation();

@@ -7,6 +7,7 @@
   Note: For lisibility, this example use the spread opeator (...) on an assossiative array which is only compatible with PHP 8.1 and above.
 </i>
 
+
 <pre>
   <code>
    /**

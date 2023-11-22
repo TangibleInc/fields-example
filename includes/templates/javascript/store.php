@@ -27,7 +27,7 @@
 <p>If you need to retrieve all values stored in the store, you can use the <code>getAllValues</code> method:</p>
 
 <pre>
-  <code>
+  <code class="language-javascript">
     const store = tangibleFields.store
     const allValues = store.getAllValues()
   </code>
@@ -40,7 +40,7 @@
 <p>To retrieve the value of a specific field, you can use the getValue method:</p>
 
 <pre>
-  <code>
+  <code class="language-javascript">
     const store = tangibleFields.store
     const storedValue = store.getValue('field-name')
   </code>
@@ -53,7 +53,7 @@
 <p>You can change the value of an existing field using the <code>setValue</code> method:</p>
 
 <pre>
-  <code>
+  <code class="language-javascript">
     const store = tangibleFields.store
     const storedValue = store.setValue('field-name', 'new-value')
   </code>

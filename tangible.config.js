@@ -6,7 +6,8 @@ module.exports = {
     },
     {
       src: 'assets/src/settings.js',
-      dest: 'assets/build/settings.min.js'
+      dest: 'assets/build/settings.min.js',
+      react: 'wp'
     }
   ]
 }

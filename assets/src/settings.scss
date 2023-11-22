@@ -1,5 +1,9 @@
 .tangible-field-example-settings {
 
+  pre {
+    background: #22272e;
+  }
+  
  .tangible-plugin-settings-tab { 
     max-width: 100%; 
   }
@@ -64,6 +68,12 @@
 
   .tf-dynamic-value-trigger-js {
     cursor: pointer;
+  }
+
+  .tangible-settings-code-preview {
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
   }
 }
 
