@@ -11,6 +11,7 @@
 
 define( 'TANGIBLE_FIELD_EXAMPLE_VERSION', '0.0.4' );
 
+require_once __DIR__ . '/vendor/autoload.php';
 require_once __DIR__ . '/vendor/tangible/plugin-framework/index.php';
 require_once __DIR__ . '/vendor/tangible/fields/index.php';
 require_once __DIR__ . '/vendor/tangible/fields-pro/index.php';

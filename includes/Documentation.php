@@ -4,6 +4,8 @@ namespace Tangible\FieldsExample;
 
 defined('ABSPATH') or die();
 
+use ParsedownExtra;
+
 class Documentation {
 
   public static $instance, $plugin, $fields;
@@ -43,7 +45,17 @@ class Documentation {
     $fields = tangible_fields();
     $plugin = tangible_field_example();
 
-    require_once __DIR__ . '/templates/' . $page['path'] . '.php';
+    $path = __DIR__ . '/templates/' . $page['path'];
+    $extension = file_exists($path . '.php') ? '.php' : '.md'; 
+    
+    if( $extension === '.md' ) {
+      $content = file_get_contents($path . $extension);
+      $parsdown = new ParsedownExtra();
+      echo $parsdown->text($content);
+    }
+    else {
+      require_once $path . $extension;
+    }    
   }
 
   function start_code($language = 'php') {

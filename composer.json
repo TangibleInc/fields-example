@@ -24,8 +24,8 @@
   "require": {
     "tangible/plugin-framework": "dev-variant/without-updater",
     "tangible/fields": "dev-main",
-    "tangible/fields-pro": "dev-main"
+    "tangible/fields-pro": "dev-main",
+    "erusev/parsedown-extra": "dev-master"
   },
-  "require-dev": {},
   "minimum-stability": "dev"
 }

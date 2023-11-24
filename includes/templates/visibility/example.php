@@ -1,6 +1,7 @@
 <div class="tangible-settings-row">
   <?= $fields->render_field('visibility-text', [
     'type'        => 'text',
+    'label'       => 'Text input',
     'description' => 'Type "show repeater" to display the repeater',
     'value'       => $fields->fetch_value('visibility-text'),
   ]); ?>
@@ -19,8 +20,9 @@
     ],
     'sub_fields' => [
       [
-        'name' => 'number-subfield',
-        'type' => 'number',
+        'name'  => 'number-subfield',
+        'type'  => 'number',
+        'label' => 'Row 1',
       ],
       [
         'type'      => 'text',
