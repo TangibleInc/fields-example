@@ -1,4 +1,4 @@
-<h4>Text</h4>
+<h4>Text (insert mode)</h4>
 
 <div class="tangible-settings-row">
   <?= $fields->render_field('dynamic-text', [
@@ -15,6 +15,30 @@
   'Raw value: ' . $fields->fetch_value('dynamic-text'),
   'Parsed value: ' . $fields->render_value(
     $fields->fetch_value('dynamic-text')
+  ),
+); ?>
+
+<div class="tangible-settings-row">
+  <?php submit_button() ?>
+</div>
+
+<h4>Text (replace mode)</h4>
+
+<div class="tangible-settings-row">
+  <?= $fields->render_field('dynamic-text-replace', [
+    'label'       => 'Text field',
+    'type'        => 'text',
+    'value'       => $fields->fetch_value('dynamic-text-replace'),
+    'placeholder' => 'Example placeholder',
+    'description' => 'Example description',
+    'dynamic'     => [ 'mode' => 'replace' ]
+  ]) ?>
+</div>
+
+<?php tangible()->see(
+  'Raw value: ' . $fields->fetch_value('dynamic-text-replace'),
+  'Parsed value: ' . $fields->render_value(
+    $fields->fetch_value('dynamic-text-replace')
   ),
 ); ?>
 
