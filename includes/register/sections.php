@@ -242,6 +242,13 @@ $documentation->register_section('fields', [
 $documentation->register_section('repeater', [
   'title' => 'Repeater',
   'pages' => [
+    'bare' => [
+      'title' => 'Bare',
+      'path'  => 'repeater/bare',
+      'fields'=> [
+        'repeater_bare' => [ 'json' => true ],
+      ]
+    ],
     'block' => [
       'title' => 'Block',
       'path'  => 'repeater/block',
@@ -261,6 +268,24 @@ $documentation->register_section('repeater', [
         'repeater_table_max'            => [ 'json' => true ]
       ]
     ]
+  ]
+]);
+
+$documentation->register_section('conditional-logic', [
+  'title' => 'Conditional logic',
+  'pages' => [
+    'create' => [
+      'title' => 'Create conditions',
+      'path'  => 'conditional-logic/create',
+      'fields'=> [
+        'conditonal_logic'       => [ 'json' => true ],
+        'conditonal_logic_modal' => [ 'json' => true ],
+      ]
+    ],
+    'evaluate' => [
+      'title' => 'Evaluate',
+      'path'  => 'conditional-logic/evaluate',
+    ],
   ]
 ]);
 
