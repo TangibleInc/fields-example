@@ -29,10 +29,14 @@ $documentation->register_section('installation', [
 $documentation->register_section('registration', [
   'title' => 'Registration',
   'pages' => [
-    'composer' => [
-      'title' => 'Basic example',
-      'path'  => 'registration/index'
-    ]
+    'registration-usage' => [
+      'title' => 'Usage',
+      'path'  => 'registration/usage'
+    ],
+    'registration-save-load' => [
+      'title' => 'Save and load',
+      'path'  => 'registration/save-load'
+    ],
   ]
 ]);
 

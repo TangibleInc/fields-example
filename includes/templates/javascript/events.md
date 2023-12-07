@@ -61,8 +61,8 @@ tangibleFields.trigger('myCustomEvent', args)
   Triggered when a field is initialized
   ```javascript
   tangibleFields.event('initField', field => {
-    field.name // Field name
-    field.props // Configuration passed when creating the field (type, label ...etc)
+      field.name // Field name
+      field.props // Configuration passed when creating the field (type, label ...etc)
   })
   ```         
       
@@ -71,11 +71,11 @@ tangibleFields.trigger('myCustomEvent', args)
   ```javascript
   tangibleFields.event('valueChange', field => {
 
-    field.name // Field name, or false if no name (it will be the case for subfields)
-    field.props // Configuration passed when creating the field (type, label ...etc)
-    field.value // New field value
+      field.name // Field name, or false if no name (it will be the case for subfields)
+      field.props // Configuration passed when creating the field (type, label ...etc)
+      field.value // New field value
 
-    // Note: You can check if the change happened in a subfield with this condition:
-    const isSubfield = field.props?.controlType === 'subfield'
+      // Note: You can check if the change happened in a subfield with this condition:
+      const isSubfield = field.props?.controlType === 'subfield'
   })
   ```
