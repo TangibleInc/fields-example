@@ -1,6 +1,6 @@
 <h4>Register a new field type</h4>
 
-<p>It's possible to register your own field type from your script, by registerng a React component and associate it with a new field type.</p>
+<p>It's possible to register your own field type from your script, by registering a React component and associating it with a new field type.</p>
 <p>It can be done with the <code>tangibleFields.types.add()</code> function:</p>
 
 <?php $this->start_code('javascript') ?>
@@ -13,7 +13,7 @@ In order to interact correctly with fields, your custom component must:
 <ul>
   <li>Get its initial value from <code>props.value</code></li>
   <li>If <code>props.onChange</code> is defined, return the new value each time it changes</li>
-  <li>When <code>props.name</code> is defined, make the value accessible from a traditional html forms (by defining the value in an hidden input for example)</li>
+  <li>When <code>props.name</code> is defined, make the value accessible from a traditional html form (by defining the value in an hidden input for example)</li>
 </ul>
 
 <p>Here is a minimal example:</p>
