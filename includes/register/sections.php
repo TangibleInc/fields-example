@@ -275,6 +275,24 @@ $documentation->register_section('repeater', [
   ]
 ]);
 
+$documentation->register_section('elements', [
+  'title' => 'Elements',
+  'pages' => [
+    'button' => [
+      'title' => 'Button',
+      'path'  => 'elements/button',
+    ],
+    'description' => [
+      'title' => 'Description',
+      'path'  => 'elements/description',
+    ],
+    'label' => [
+      'title' => 'Label',
+      'path'  => 'elements/label',
+    ]
+  ]
+]);
+
 $documentation->register_section('conditional-logic', [
   'title' => 'Conditional logic',
   'pages' => [
