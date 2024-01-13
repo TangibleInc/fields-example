@@ -31,6 +31,39 @@
   <?= $fields->render_element('button-primary') ?>
 </div>
 
+<h4>Example - Button text action</h4>
+
+<div class="tangible-settings-row">
+  <?php $fields->register_element('button-text-action', [
+    'type'    => 'button',
+    'layout'  => 'text-action',
+    'content' => 'Action'
+  ]) ?>
+  <?= $fields->render_element('button-text-action') ?>
+</div>
+
+<h4>Example - Button text danger</h4>
+
+<div class="tangible-settings-row">
+  <?php $fields->register_element('button-text-danger', [
+    'type'    => 'button',
+    'layout'  => 'text-danger',
+    'content' => 'Danger'
+  ]) ?>
+  <?= $fields->render_element('button-text-danger') ?>
+</div>
+
+<h4>Example - Button text primary</h4>
+
+<div class="tangible-settings-row">
+  <?php $fields->register_element('button-text-primary', [
+    'type'    => 'button',
+    'layout'  => 'text-primary',
+    'content' => 'Primary'
+  ]) ?>
+  <?= $fields->render_element('button-text-primary') ?>
+</div>
+
 <h4>Example - Button simple</h4>
 
 <div class="tangible-settings-row">
@@ -51,7 +84,7 @@
 
 $fields->register_element('button-name', [
   'type'    => 'button',
-  'layout'  => 'primary', // Optional: primary, action or danger
+  'layout'  => 'primary', // Optional: primary, action, danger, text-primary, text-action, text-danger
   'content' => 'Button text'
 ]);
 

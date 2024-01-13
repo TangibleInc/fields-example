@@ -246,6 +246,13 @@ $documentation->register_section('fields', [
 $documentation->register_section('repeater', [
   'title' => 'Repeater',
   'pages' => [
+    'advanced' => [
+      'title' => 'Advanced',
+      'path'  => 'repeater/advanced',
+      'fields'=> [
+        'repeater_advanced' => [ 'json' => true ],
+      ]
+    ],
     'bare' => [
       'title' => 'Bare',
       'path'  => 'repeater/bare',
