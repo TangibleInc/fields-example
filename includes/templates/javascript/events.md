@@ -8,6 +8,7 @@ Tangible Fields include an event/trigger system that you can use from the `tangi
 - [Event list](#events)
   - [initField](#init-field)
   - [valueChange](#value-change)
+  - [buttonPressed](#button-pressed)
 
 #### Listen to en event {#listen}
 
@@ -58,7 +59,7 @@ tangibleFields.trigger('myCustomEvent', args)
 #### Event list {#events}
 
   - ##### initField {#init-field}
-  Triggered when a field is initialized
+  Triggered when a field is initialized:
   ```javascript
   tangibleFields.event('initField', field => {
       field.name // Field name
@@ -67,7 +68,7 @@ tangibleFields.trigger('myCustomEvent', args)
   ```         
       
   - ##### valueChange {#value-change}    
-  Triggered each time a field value change. Is also triggered for subfields from repeaters and field-groups.
+  Triggered each time a field value change. Is also triggered for subfields from repeaters and field-groups:
   ```javascript
   tangibleFields.event('valueChange', field => {
 
@@ -77,5 +78,15 @@ tangibleFields.trigger('myCustomEvent', args)
 
       // Note: You can check if the change happened in a subfield with this condition:
       const isSubfield = field.props?.controlType === 'subfield'
+  })
+  ```
+
+  - ##### buttonPressed {#button-pressed}    
+  Triggered each time a button is pressed:
+  ```javascript
+  tangibleFields.event('buttonPressed', button => {
+      button.name // Or false if no name
+      button.props // Configuration passed when creating the button
+      button.event
   })
   ```
