@@ -296,6 +296,10 @@ $documentation->register_section('elements', [
     'label' => [
       'title' => 'Label',
       'path'  => 'elements/label',
+    ],
+    'modal' => [
+      'title' => 'Modal',
+      'path'  => 'elements/modal',
     ]
   ]
 ]);
