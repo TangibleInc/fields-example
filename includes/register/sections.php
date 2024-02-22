@@ -215,6 +215,8 @@ $documentation->register_section('fields', [
       'fields'=> [
         'text'           => [],
         'text-read-only' => [],
+        'text-mask'      => [],
+        'text-prefix-suffix' => []
       ]
     ],
     'text_suggestion' => [
