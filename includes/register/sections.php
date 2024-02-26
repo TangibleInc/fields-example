@@ -119,7 +119,8 @@ $documentation->register_section('fields', [
       'title' => 'Date picker',
       'path'  => 'fields/date-picker',
       'fields'=> [
-        'date' => []
+        'date' => [],
+        'date_range' => [],
       ]
     ],
     'dimensions' => [

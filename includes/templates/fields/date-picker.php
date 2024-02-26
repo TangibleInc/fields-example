@@ -17,6 +17,22 @@ It's also not possible to set a time yet, only the date.
   <?php submit_button() ?>
 </dib>
 
+<h4>Example of Date Range</h4>
+
+<div class="tangible-settings-row">
+  <?= $fields->render_field('date_range', [
+    'label'       => 'Date field',
+    'type'        => 'date_picker',
+    'description' => 'Description',
+    'date_range'  => true,
+    'value'       => $fields->fetch_value('date_range'),
+  ]) ?>
+</div>
+
+<div class="tangible-settings-row">
+  <?php submit_button() ?>
+</dib>
+
 <h4>Value</h4>
 
 <?php tangible()->see(
