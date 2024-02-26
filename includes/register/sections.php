@@ -120,7 +120,7 @@ $documentation->register_section('fields', [
       'path'  => 'fields/date-picker',
       'fields'=> [
         'date' => [],
-        'date_range' => [],
+        'date_range' => [ 'json' => true ],
       ]
     ],
     'dimensions' => [
