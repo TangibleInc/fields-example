@@ -17,6 +17,22 @@ It's also not possible to set a time yet, only the date.
   <?php submit_button() ?>
 </dib>
 
+<h4>Example of Future Dates only</h4>
+
+<div class="tangible-settings-row">
+  <?= $fields->render_field('date_future_only', [
+    'label'       => 'Date field',
+    'type'        => 'date_picker',
+    'description' => 'Description',
+    'future_only' => true,
+    'value'       => $fields->fetch_value('date_future_only'),
+  ]) ?>
+</div>
+
+<div class="tangible-settings-row">
+  <?php submit_button() ?>
+</dib>
+
 <h4>Example of Date Range</h4>
 
 <div class="tangible-settings-row">
@@ -54,6 +70,7 @@ It's also not possible to set a time yet, only the date.
 
 <?php tangible()->see(
   $fields->fetch_value('date'),
+  $fields->fetch_value('date_future_only'),
   $fields->fetch_value('date_range'),
   $fields->fetch_value('multi_month')
 ); ?>
@@ -68,6 +85,9 @@ It's also not possible to set a time yet, only the date.
     echo $fields->render_field('name', [
       'label' => 'Date field',
       'type'  => 'date_picker',
+      'future_only' => true, // to restrict selection to future dates only
+      'date_range' => true,  // to enable multi-select of date ranges
+      'multi_month' => 2,    // to display multiple months in a single pop-over, to use this, you must enable date_range
       'value' => $fields->fetch_value('name'),
     ]);
   </code> 
