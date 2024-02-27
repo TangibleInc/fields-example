@@ -121,6 +121,7 @@ $documentation->register_section('fields', [
       'fields'=> [
         'date' => [],
         'date_range' => [ 'json' => true ],
+        'multi_month' => [ 'json' => true ],
       ]
     ],
     'dimensions' => [

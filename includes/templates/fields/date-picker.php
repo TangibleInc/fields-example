@@ -33,11 +33,29 @@ It's also not possible to set a time yet, only the date.
   <?php submit_button() ?>
 </dib>
 
+<h4>Example of Date Range with Multiple Month View</h4>
+
+<div class="tangible-settings-row">
+  <?= $fields->render_field('multi_month', [
+    'label'       => 'Date field',
+    'type'        => 'date_picker',
+    'description' => 'Description',
+    'date_range'  => true,
+    'multi_month' => 3,
+    'value'       => $fields->fetch_value('multi_month'),
+  ]) ?>
+</div>
+
+<div class="tangible-settings-row">
+  <?php submit_button() ?>
+</dib>
+
 <h4>Value</h4>
 
 <?php tangible()->see(
   $fields->fetch_value('date'),
-  $fields->fetch_value('date_range')
+  $fields->fetch_value('date_range'),
+  $fields->fetch_value('multi_month')
 ); ?>
 
 <h4>Code</h4>
