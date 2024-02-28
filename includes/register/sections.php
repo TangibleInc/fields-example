@@ -123,6 +123,7 @@ $documentation->register_section('fields', [
         'date_future_only' => [],
         'date_range' => [ 'json' => true ],
         'multi_month' => [ 'json' => true ],
+        'date_presets' => [ 'json' => true ],
       ]
     ],
     'dimensions' => [
