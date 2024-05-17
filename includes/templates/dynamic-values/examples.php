@@ -11,7 +11,7 @@
   ]) ?>
 </div>
 
-<?php tangible()->see(
+<?php tangible\see(
   'Raw value: ' . $fields->fetch_value('dynamic-text'),
   'Parsed value: ' . $fields->render_value(
     $fields->fetch_value('dynamic-text')
@@ -35,7 +35,7 @@
   ]) ?>
 </div>
 
-<?php tangible()->see(
+<?php tangible\see(
   'Raw value: ' . $fields->fetch_value('dynamic-text-replace'),
   'Parsed value: ' . $fields->render_value(
     $fields->fetch_value('dynamic-text-replace')
@@ -59,7 +59,7 @@
   ]) ?>
 </div>
 
-<?php tangible()->see(
+<?php tangible\see(
   'Raw value: ' . $fields->fetch_value('dynamic-color'),
   'Parsed value: ' . $fields->render_value(
     $fields->fetch_value('dynamic-color')
@@ -83,7 +83,7 @@
   ]) ?>
 </div>
 
-<?php tangible()->see(
+<?php tangible\see(
   'Raw value: ' . $fields->fetch_value('dynamic-date'),
   'Parsed value: ' . $fields->render_value(
     $fields->fetch_value('dynamic-date')
@@ -107,7 +107,7 @@
   ]) ?>
 </div>
 
-<?php tangible()->see(
+<?php tangible\see(
   'Raw value: ' . $fields->fetch_value('dynamic-number'),
   'Parsed value: ' . $fields->render_value(
     $fields->fetch_value('dynamic-number')

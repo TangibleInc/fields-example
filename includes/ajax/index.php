@@ -2,6 +2,8 @@
 
 defined('ABSPATH') or die();
 
+use tangible\ajax;
+
 /**
  * Test action copied from tangible-blocks, just added it so that we have an 
  * example of ajax action from our module to use
@@ -9,10 +11,9 @@ defined('ABSPATH') or die();
  * @see https://bitbucket.org/tangibleinc/blocks/src/main/includes/block/controls/aliases/post-select.php
  */
 
-$ajax = $framework->ajax();
-$ajax->enqueue();
+ajax\enqueue();
 
-$ajax->add_action('tangible_field_select_post', function($data, $ajax) use($plugin) {
+ajax\add_action('tangible_field_select_post', function($data, $ajax) use($plugin) {
   
   /**
    * Here, we should check that the current user has the right to edit in the current builder 

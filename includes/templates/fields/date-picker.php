@@ -86,7 +86,7 @@ It's also not possible to set a time yet, only the date.
 
 <h4>Value</h4>
 
-<?php tangible()->see(
+<?php tangible\see(
   $fields->fetch_value('date'),
   $fields->fetch_value('date_future_only'),
   $fields->fetch_value('date_range'),

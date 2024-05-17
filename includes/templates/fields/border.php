@@ -56,7 +56,7 @@
 
 <h4>Value</h4>
 
-<?php tangible()->see(
+<?php tangible\see(
   $fields->fetch_value('border'),
   $fields->fetch_value('border_unlinked'),
   $fields->fetch_value('border_linked')

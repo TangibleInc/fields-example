@@ -44,7 +44,7 @@ Possible format:
 
 <h4>Value</h4>
 
-<?php tangible()->see(
+<?php tangible\see(
   $fields->fetch_value('color_opacity'),
   $fields->fetch_value('color')
 ); ?>

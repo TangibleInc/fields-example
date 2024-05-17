@@ -49,7 +49,7 @@ Here is a working example with a JSON value:
       class="tangible-settings-row" 
       data-value="<?= esc_attr( $fields->fetch_value('custom-field-example') ) ?>"
     ></div>
-    <?php tangible()->see( 
+    <?php tangible\see( 
       $fields->fetch_value('custom-field-example')
     ); ?>
     <div class="tangible-settings-row">

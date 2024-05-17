@@ -50,7 +50,7 @@
 
 <h4>Value</h4>
 
-<?php tangible()->see(
+<?php tangible\see(
   $fields->fetch_value('dimensions'),
   $fields->fetch_value('dimensions_not_linked'),
   $fields->fetch_value('dimensions_linked')

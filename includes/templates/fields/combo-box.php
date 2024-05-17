@@ -79,7 +79,7 @@ Might be renamed to "search" in the future.
 
 <h4>Value</h4>
 
-<?php tangible()->see(
+<?php tangible\see(
   $fields->fetch_value('combobox'),
   $fields->fetch_value('combobox_multiple'),
   $fields->fetch_value('combobox_categories'),

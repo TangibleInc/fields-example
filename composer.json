@@ -2,11 +2,11 @@
   "repositories": [
     {
       "type": "vcs",
-      "url": "git@bitbucket.org:/tangibleinc/tangible-plugin-framework.git"
+      "url": "git@github.com:tangibleinc/framework.git"
     },
     {
       "type": "vcs",
-      "url": "git@bitbucket.org:/tangibleinc/tangible-fields-module.git"
+      "url": "git@github.com:tangibleinc/fields.git"
     },
     {
       "type": "vcs",
@@ -22,7 +22,7 @@
     }
   ],
   "require": {
-    "tangible/plugin-framework": "dev-variant/without-updater",
+    "tangible/framework": "dev-main",
     "tangible/fields": "dev-main",
     "tangible/fields-pro": "dev-main",
     "erusev/parsedown-extra": "dev-master"

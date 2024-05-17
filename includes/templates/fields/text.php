@@ -16,7 +16,7 @@
 
 <h4>Value</h4>
 
-<?php tangible()->see(
+<?php tangible\see(
   $fields->fetch_value('text')
 ); ?>
 
@@ -39,7 +39,7 @@
 
 <h4>Value</h4>
 
-<?php tangible()->see(
+<?php tangible\see(
   $fields->fetch_value('text-read-only')
 ); ?>
 
@@ -62,7 +62,7 @@
 
 <h4>Value</h4>
 
-<?php tangible()->see(
+<?php tangible\see(
   $fields->fetch_value('text-mask')
 ); ?>
 
@@ -86,7 +86,7 @@
 
 <h4>Value</h4>
 
-<?php tangible()->see(
+<?php tangible\see(
   $fields->fetch_value('text-prefix-suffix')
 ); ?>
 

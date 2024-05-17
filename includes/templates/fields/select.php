@@ -108,7 +108,7 @@
 
 <h4>Value</h4>
 
-<?php tangible()->see(
+<?php tangible\see(
   $fields->fetch_value('select'),
   $fields->fetch_value('select_categories'),
   $fields->fetch_value('select_multiple'),

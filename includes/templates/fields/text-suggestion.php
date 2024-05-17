@@ -58,7 +58,7 @@ Can contain both text and dynamic element from the dropdown.<br />
 
 <h4>Value</h4>
 
-<?php tangible()->see(
+<?php tangible\see(
   $fields->fetch_value('dynamic_text'),
   $fields->fetch_value('dynamic_text_categories')
 ); ?>

@@ -27,7 +27,7 @@ A field group can contain any other field, an the global value will be saved as 
 
 <h4>Value</h4>
 
-<?php tangible()->see(
+<?php tangible\see(
   $fields->fetch_value('field_group')
 ); ?>
 

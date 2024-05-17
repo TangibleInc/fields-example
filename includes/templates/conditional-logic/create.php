@@ -22,7 +22,7 @@ $fields->render_field('conditonal_logic', [
 ]);
 <?php $this->end_code() ?>
 
-<div><?php tangible()->see($fields->fetch_value('conditonal_logic')) ?></div>
+<div><?php tangible\see($fields->fetch_value('conditonal_logic')) ?></div>
 
 <div class="tangible-settings-row">
   <?php submit_button() ?>
@@ -50,7 +50,7 @@ $fields->render_field('conditonal_logic_modal', [
 ]);
 <?php $this->end_code() ?>
 
-<div><?php tangible()->see($fields->fetch_value('conditonal_logic_modal')) ?></div>
+<div><?php tangible\see($fields->fetch_value('conditonal_logic_modal')) ?></div>
 
 <div class="tangible-settings-row">
   <?php submit_button() ?>

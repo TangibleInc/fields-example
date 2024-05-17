@@ -187,10 +187,10 @@ A repeater row can contain any field.
 
 <h4>Value</h4>
 
-<div><?php tangible()->see($fields->fetch_value('repeater_block')) ?></div>
-<div><?php tangible()->see($fields->fetch_value('repeater_block_non_repeatable')) ?></div>
-<div><?php tangible()->see($fields->fetch_value('repeater_block_max')) ?></div>
-<div><?php tangible()->see($fields->fetch_value('repeater_block_bulk_switch_title')) ?></div>
+<div><?php tangible\see($fields->fetch_value('repeater_block')) ?></div>
+<div><?php tangible\see($fields->fetch_value('repeater_block_non_repeatable')) ?></div>
+<div><?php tangible\see($fields->fetch_value('repeater_block_max')) ?></div>
+<div><?php tangible\see($fields->fetch_value('repeater_block_bulk_switch_title')) ?></div>
 
 <h4>Code</h4>
 

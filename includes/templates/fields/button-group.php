@@ -43,7 +43,7 @@ Buttons can contain both <a href='https://developer.wordpress.org/resource/dashi
 
 <h4>Value</h4>
 
-<?php tangible()->see(
+<?php tangible\see(
   $fields->fetch_value('button_group_dashicon'),
   $fields->fetch_value('button_group')
 ); ?>

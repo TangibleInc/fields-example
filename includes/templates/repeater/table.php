@@ -139,9 +139,9 @@ A repeater row can contain any field.
 
 <h4>Value</h4>
 
-<div><?php tangible()->see($fields->fetch_value('repeater_table')) ?></div>
-<div><?php tangible()->see($fields->fetch_value('repeater_table_non_repeatable')) ?></div>
-<div><?php tangible()->see($fields->fetch_value('repeater_table_max')) ?></div>
+<div><?php tangible\see($fields->fetch_value('repeater_table')) ?></div>
+<div><?php tangible\see($fields->fetch_value('repeater_table_non_repeatable')) ?></div>
+<div><?php tangible\see($fields->fetch_value('repeater_table_max')) ?></div>
 
 <h4>Code</h4>
 

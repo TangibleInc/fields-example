@@ -91,7 +91,7 @@ By default, all the mime types from this function are allowed: <a href="https://
 
 <h4>Value</h4>
 
-<?php tangible()->see(
+<?php tangible\see(
   $fields->fetch_value('file'),
   $fields->fetch_value('file_input'),
   $fields->fetch_value('file_wp_media'),

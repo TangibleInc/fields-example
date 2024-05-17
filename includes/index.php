@@ -4,18 +4,20 @@ namespace Tangible\FieldsExample;
 
 defined('ABSPATH') or die();
 
+use tangible\framework;
+
 require_once __DIR__ . '/ajax/index.php';
 require_once __DIR__ . '/Documentation.php';
 require_once __DIR__ . '/register/index.php';
 require_once __DIR__ . '/enqueue.php';
 
-$plugin->register_settings([
+framework\register_plugin_settings($plugin, [
   'css'  => $plugin->assets_url . '/build/settings.min.css',
   'js'   => $plugin->assets_url . '/build/settings.min.js',
   'tabs' => [
     'php' => [
       'title' => 'Documentation',
-      'callback' => function($plugin_config, $settings, $settings_key) use ($framework, $fields, $plugin) {
+      'callback' => function() use ($fields, $plugin) {
 
         $documentation = Documentation::$instance;
         $plugin->enqueue();

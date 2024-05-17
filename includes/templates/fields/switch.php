@@ -17,7 +17,7 @@
 
 <h4>Value</h4>
 
-<?php tangible()->see(
+<?php tangible\see(
   $fields->fetch_value('switch')
 ); ?>
 

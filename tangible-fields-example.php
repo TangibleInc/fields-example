@@ -12,7 +12,7 @@
 define( 'TANGIBLE_FIELD_EXAMPLE_VERSION', '0.0.4' );
 
 require_once __DIR__ . '/vendor/autoload.php';
-require_once __DIR__ . '/vendor/tangible/plugin-framework/index.php';
+require_once __DIR__ . '/vendor/tangible/framework/index.php';
 require_once __DIR__ . '/vendor/tangible/fields/index.php';
 require_once __DIR__ . '/vendor/tangible/fields-pro/index.php';
 
@@ -26,8 +26,7 @@ function tangible_field_example($instance = false) {
 
 add_action('plugins_loaded', function() {
 
-  $framework = tangible();
-  $plugin    = $framework->register_plugin([
+  $plugin = tangible\framework\register_plugin([
     'name'           => 'tangible-field-example',
     'title'          => 'Tangible Field Example',
     'setting_prefix' => 'tangible_field_example',

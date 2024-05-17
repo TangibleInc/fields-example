@@ -38,7 +38,7 @@ A repeater row can contain any fields.
   <?php submit_button() ?>
 </div>
 
-<div><?php tangible()->see($fields->fetch_value('repeater_advanced')) ?></div>
+<div><?php tangible\see($fields->fetch_value('repeater_advanced')) ?></div>
 
 <h4>Code</h4>
 

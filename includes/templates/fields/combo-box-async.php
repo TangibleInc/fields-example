@@ -138,7 +138,7 @@ In the case of an async combobox, it will be a json object with both the value a
 
 <h4>Value</h4>
 
-<?php tangible()->see(
+<?php tangible\see(
   $fields->fetch_value('combobox_async_rest'),
   $fields->fetch_value('combobox_async_ajax'),
   $fields->fetch_value('combobox_async_multiple')

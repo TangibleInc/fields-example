@@ -55,7 +55,7 @@ The value of the toggle will be saved in the JSON object, using the name "enable
 
 <h4>Value</h4>
 
-<?php tangible()->see( 
+<?php tangible\see( 
   $fields->fetch_value('accordion'), 
   $fields->fetch_value('accordion-with-switch') 
 ); ?>

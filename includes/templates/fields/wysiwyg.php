@@ -40,7 +40,7 @@ We support two options for the editor: ProseMirror and TinyMCE.
 
 <h4>Value</h4>
 
-<?php tangible()->see(
+<?php tangible\see(
   $fields->fetch_value('wysiwyg'),
   $fields->fetch_value('wysiwyg-tinymce')
 ); ?>
