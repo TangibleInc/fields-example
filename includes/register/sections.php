@@ -174,6 +174,14 @@ $documentation->register_section('fields', [
         'hidden' => []
       ]
     ],
+    'list' => [
+      'title' => 'List',
+      'path'  => 'fields/list',
+      'fields'=> [
+        'list'                 => [ 'json' => true ],
+        'list-with-visibility' => [ 'json' => true ]
+      ]
+    ],
     'number' => [
       'title' => 'Number',
       'path'  => 'fields/number',
