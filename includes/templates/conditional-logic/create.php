@@ -2,7 +2,7 @@
 
 Conditions can be saved using the conditional panel field type. 
 
-The data saved by this field type can then retreive and be evaluated (more about this in the evaluate page).
+The data saved by this field type can then retrieve and be evaluated (more about this in the evaluate page).
 
 <h4>Simple example</h4>
 
@@ -12,7 +12,7 @@ Here is how the conditional panel looks like, and the associated code:
   <?= $fields->render_field('conditonal_logic', [
     'type'  => 'conditional_panel',
     'value' => $fields->fetch_value('conditonal_logic'),
-    'dynamic_categories' => [ 'text', 'number', 'date' ],
+    'dynamic_categories' => [ 'post' ],
     'operators' => [
       '_eq' => 'Is',
       '_neq' => 'Is not',
@@ -26,7 +26,7 @@ Here is how the conditional panel looks like, and the associated code:
 $fields->render_field('conditonal_logic', [
   'type'  => 'conditional_panel',
   'value' => $fields->fetch_value('conditonal_logic'),
-  'dynamic_categories' => [ 'text', 'number', 'date' ],
+  'dynamic_categories' => [ 'post', 'user', 'general' ],
   'operators' => [
     '_eq' => 'Is',
     '_neq' => 'Is not',
@@ -53,7 +53,6 @@ Here is an example with a modal:
     'type'      => 'conditional_panel',
     'use_modal' => true,
     'value'     => $fields->fetch_value('conditonal_logic_modal'),
-    'dynamic_categories' => [ 'text', 'number', 'date' ]
   ]); ?>
 </div>
 
@@ -62,7 +61,7 @@ $fields->render_field('conditonal_logic_modal', [
   'type'      => 'conditional_panel',
   'use_modal' => true,
   'value'     => $fields->fetch_value('conditonal_logic_modal'),
-  'dynamic_categories' => [ 'text', 'number', 'date' ]
+  // 'dynamic_categories' => [ 'post', 'user', 'general' ],
 ]);
 <?php $this->end_code() ?>
 
