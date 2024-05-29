@@ -207,6 +207,14 @@ $documentation->register_section('fields', [
         'select_multiple_categories' => [],
       ]
     ],
+//    'select3' => [
+//      'title' => 'Select3',
+//      'path'  => 'fields/select3',
+//      'fields'=> [
+//        'select3_single_select' => [],
+//        'select3_multi_select' => [],
+//      ]
+//    ],
     'simple_dimension' => [
       'title' => 'Simple dimension',
       'path'  => 'fields/simple-dimension',
@@ -228,7 +236,8 @@ $documentation->register_section('fields', [
         'text'           => [],
         'text-read-only' => [],
         'text-mask'      => [],
-        'text-prefix-suffix' => []
+        'text-prefix-suffix' => [],
+        'text-prefix-suffix-mask' => [],
       ]
     ],
     'text_suggestion' => [

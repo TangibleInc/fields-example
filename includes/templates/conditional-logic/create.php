@@ -11,14 +11,28 @@ Here is how the conditional panel looks like, and the associated code:
 <div class="tangible-settings-row">
   <?= $fields->render_field('conditonal_logic', [
     'type'  => 'conditional_panel',
-    'value' => $fields->fetch_value('conditonal_logic')
+    'value' => $fields->fetch_value('conditonal_logic'),
+    'dynamic_categories' => [ 'text', 'number', 'date' ],
+    'operators' => [
+      '_eq' => 'Is',
+      '_neq' => 'Is not',
+      '_lt' => 'Less than',
+      '_gt' => 'Greater than',
+    ]
   ]); ?>
 </div>
 
 <?php $this->start_code('php') ?>
 $fields->render_field('conditonal_logic', [
   'type'  => 'conditional_panel',
-  'value' => $fields->fetch_value('conditonal_logic')
+  'value' => $fields->fetch_value('conditonal_logic'),
+  'dynamic_categories' => [ 'text', 'number', 'date' ],
+  'operators' => [
+    '_eq' => 'Is',
+    '_neq' => 'Is not',
+    '_lt' => 'Less than',
+    '_gt' => 'Greater than',
+  ]
 ]);
 <?php $this->end_code() ?>
 
@@ -38,7 +52,8 @@ Here is an example with a modal:
   <?= $fields->render_field('conditonal_logic_modal', [
     'type'      => 'conditional_panel',
     'use_modal' => true,
-    'value'     => $fields->fetch_value('conditonal_logic_modal')
+    'value'     => $fields->fetch_value('conditonal_logic_modal'),
+    'dynamic_categories' => [ 'text', 'number', 'date' ]
   ]); ?>
 </div>
 
@@ -46,7 +61,8 @@ Here is an example with a modal:
 $fields->render_field('conditonal_logic_modal', [
   'type'      => 'conditional_panel',
   'use_modal' => true,
-  'value'     => $fields->fetch_value('conditonal_logic_modal')
+  'value'     => $fields->fetch_value('conditonal_logic_modal'),
+  'dynamic_categories' => [ 'text', 'number', 'date' ]
 ]);
 <?php $this->end_code() ?>
 

@@ -51,8 +51,8 @@
     'type'        => 'text',
     'value'       => $fields->fetch_value('text-mask'),
     'placeholder' => '',
-    'description' => 'Mask: "aa-99/a9a"',
-    'input_mask'  => 'aa-99/a9a'
+    'description' => 'Mask: "999-aaa"',
+    'input_mask'  => '999-aaa'
   ]) ?>
 </div>
 
@@ -90,6 +90,33 @@
   $fields->fetch_value('text-prefix-suffix')
 ); ?>
 
+<h4>Example with prefix, suffix, and mask</h4>
+
+<div class="tangible-settings-row">
+  <?= $fields->render_field('text-prefix-suffix-mask', [
+    'label'       => 'Text field',
+    'type'        => 'text',
+//    'value'       => $fields->fetch_value('text-prefix-suffix-mask'),
+//    'value'       => 'PRE-ACCREDAAAA-???BZ-00POST-ACCRED',
+    'value'       => "PRE-ACCREDAAAA-???BZ-00POST-ACCRED",
+    'placeholder' => '',
+    'description' => 'description',
+    'prefix'      => 'PRE-ACCRED',
+    'suffix'      => 'POST-ACCRED',
+    'input_mask'  => 'AAAA-???BZ-00'
+  ]) ?>
+</div>
+
+<div class="tangible-settings-row">
+  <?php submit_button() ?>
+</div>
+
+<h4>Value</h4>
+
+<?php tangible()->see(
+  $fields->fetch_value('text-prefix-suffix-mask')
+); ?>
+
 <h4>Code</h4>
 
 <pre>
@@ -113,7 +140,7 @@
        * - '*' = any alphanumeric character.
        * - All other characters are literal values and will be displayed automatically.
       */
-      'mask'      => 'aaa-99'
+      'input_mask'      => 'aaa-99'
     ]);
   </code>
 </pre>
