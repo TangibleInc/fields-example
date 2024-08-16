@@ -89,6 +89,13 @@ $documentation->register_section('fields', [
         'checkbox' => []
       ]
     ],
+    'code' => [
+      'title' => 'Code',
+      'path'  => 'fields/code',
+      'fields'=> [
+        'code' => [],
+      ]
+    ],
     'color_picker' => [
       'title' => 'Color picker',
       'path'  => 'fields/color-picker',
@@ -260,6 +267,7 @@ $documentation->register_section('fields', [
       'path'  => 'fields/wysiwyg',
       'fields'=> [
         'wysiwyg'         => [],
+        'wysiwyg-visual'  => [],
         'wysiwyg-tinymce' => []
       ]
     ]

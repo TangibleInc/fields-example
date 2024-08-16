@@ -113,7 +113,7 @@
 
 <h4>Value</h4>
 
-<?php tangible()->see(
+<?php tangible\see(
   $fields->fetch_value('text-prefix-suffix-mask')
 ); ?>
 

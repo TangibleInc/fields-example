@@ -21,6 +21,23 @@ We support two options for the editor: ProseMirror and TinyMCE.
   <?php submit_button() ?>
 </div>
 
+<h4>Example - ProseMirror without raw_view</h4>
+
+<div class="tangible-settings-row">
+  <?= $fields->render_field('wysiwyg-visual', [
+    'label'       => 'Editor field',
+    'type'        => 'wysiwyg',
+    'value'       => $fields->fetch_value('wysiwyg-visual'),
+    'placeholder' => 'Example placeholder',
+    'description' => 'Example description',
+    'raw_view'    => false
+  ]) ?>
+</div>
+
+<div class="tangible-settings-row">
+  <?php submit_button() ?>
+</div>
+
 <h4>Example - TinyMce</h4>
 
 <div class="tangible-settings-row">
@@ -42,6 +59,7 @@ We support two options for the editor: ProseMirror and TinyMCE.
 
 <?php tangible\see(
   $fields->fetch_value('wysiwyg'),
+  $fields->fetch_value('wysiwyg-visual'),
   $fields->fetch_value('wysiwyg-tinymce')
 ); ?>
 
@@ -57,6 +75,7 @@ We support two options for the editor: ProseMirror and TinyMCE.
       'type'        => 'wysiwyg',
       'value'       => $fields->fetch_value('name'),
       'editor'      => 'tinymce',
+      'raw_view'    => false, // Only with prosemirror editor, default true
       'placeholder' => 'Example placeholder',
       'description' => 'Example description'
     ]);
