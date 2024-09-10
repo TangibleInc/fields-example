@@ -331,6 +331,10 @@ $documentation->register_section('elements', [
     'modal' => [
       'title' => 'Modal',
       'path'  => 'elements/modal',
+    ],
+    'tooltip' => [
+      'title' => 'Tooltip',
+      'path'  => 'elements/tooltip'
     ]
   ]
 ]);
