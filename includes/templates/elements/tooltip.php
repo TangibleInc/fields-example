@@ -1,5 +1,5 @@
 <h4>Example - Tooltip</h4>
-
+<span>test</span>
 <div class="tangible-settings-row">
   <?php $fields->register_element('tooltip', [
     'type'    => 'tooltip',
