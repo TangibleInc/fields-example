@@ -1,49 +1,109 @@
-<h4>Example - Tooltip start</h4>
+<!-- Tooltip Button -->
+
+<h4>Example - Tooltip Button start</h4>
 
 <div class="tangible-settings-row">
-  <?php $fields->register_element('tooltip-start', [
+  <?php $fields->register_element('tooltip-button-start', [
     'type'      => 'tooltip',
-    'label'     => 'Hover Start',
+    'layout'    => 'button',
+    'label'     => 'Button Hover Start',
     'placement' => 'start',
-    'content'   => 'Tooltip content, placement on start'
+    'content'   => 'Tooltip button content, placement on start'
   ]) ?>
-  <?= $fields->render_element('tooltip-start') ?>
+  <?= $fields->render_element('tooltip-button-start') ?>
 </div>
 
-<h4>Example - Tooltip top</h4>
+<h4>Example - Tooltip Button top</h4>
 
 <div class="tangible-settings-row">
-  <?php $fields->register_element('tooltip-top', [
+  <?php $fields->register_element('tooltip-button-top', [
     'type'      => 'tooltip',
-    'label'     => 'Hover Top',
+    'layout'    => 'button',
+    'label'     => 'Button Hover Top',
     'placement' => 'top',
-    'content'   => 'Tooltip, placement on top'
+    'content'   => 'Tooltip button content, placement on top'
   ]) ?>
-  <?= $fields->render_element('tooltip-top') ?>
+  <?= $fields->render_element('tooltip-button-top') ?>
 </div>
 
-<h4>Example - Tooltip bottom</h4>
+<h4>Example - Tooltip Button bottom</h4>
 
 <div class="tangible-settings-row">
-  <?php $fields->register_element('tooltip-bottom', [
+  <?php $fields->register_element('tooltip-button-bottom', [
     'type'      => 'tooltip',
-    'label'     => 'Hover Bottom',
+    'layout'    => 'button',
+    'label'     => 'Button Hover Bottom',
     'placement' => 'bottom',
-    'content'   => 'Tooltip content, placement on bottom'
+    'content'   => 'Tooltip button content, placement on bottom'
   ]) ?>
-  <?= $fields->render_element('tooltip-bottom') ?>
+  <?= $fields->render_element('tooltip-button-bottom') ?>
 </div>
 
-<h4>Example - Tooltip end</h4>
+<h4>Example - Tooltip Button end</h4>
 
 <div class="tangible-settings-row">
-  <?php $fields->register_element('tooltip-end', [
+  <?php $fields->register_element('tooltip-button-end', [
     'type'      => 'tooltip',
-    'label'     => 'Hover End',
+    'layout'    => 'button',
+    'label'     => 'Button Hover End',
     'placement' => 'end',
-    'content'   => 'Tooltip, placement on end'
+    'content'   => 'Tooltip button content, placement on end'
   ]) ?>
-  <?= $fields->render_element('tooltip-end') ?>
+  <?= $fields->render_element('tooltip-button-end') ?>
+</div>
+
+<!-- Tooltip Text -->
+
+<h4>Example - Tooltip Text start</h4>
+
+<div class="tangible-settings-row">
+  <?php $fields->register_element('tooltip-text-start', [
+    'type'      => 'tooltip',
+    'layout'    => 'text',
+    'label'     => 'Text Hover Start',
+    'placement' => 'start',
+    'content'   => 'Tooltip text content, placement on start'
+  ]) ?>
+  <?= $fields->render_element('tooltip-text-start') ?>
+</div>
+
+<h4>Example - Tooltip Text top</h4>
+
+<div class="tangible-settings-row">
+  <?php $fields->register_element('tooltip-text-top', [
+    'type'      => 'tooltip',
+    'layout'    => 'text',
+    'label'     => 'Text Hover Top',
+    'placement' => 'top',
+    'content'   => 'Tooltip text content, placement on top'
+  ]) ?>
+  <?= $fields->render_element('tooltip-text-top') ?>
+</div>
+
+<h4>Example - Tooltip Text bottom</h4>
+
+<div class="tangible-settings-row">
+  <?php $fields->register_element('tooltip-text-bottom', [
+    'type'      => 'tooltip',
+    'layout'    => 'text',
+    'label'     => 'Text Hover Bottom',
+    'placement' => 'bottom',
+    'content'   => 'Tooltip text content, placement on bottom'
+  ]) ?>
+  <?= $fields->render_element('tooltip-text-bottom') ?>
+</div>
+
+<h4>Example - Tooltip Text end</h4>
+
+<div class="tangible-settings-row">
+  <?php $fields->register_element('tooltip-text-end', [
+    'type'      => 'tooltip',
+    'layout'    => 'text',
+    'label'     => 'Text Hover End',
+    'placement' => 'end',
+    'content'   => 'Tooltip text content, placement on end'
+  ]) ?>
+  <?= $fields->render_element('tooltip-text-end') ?>
 </div>
 
 <h4>Code</h4>
@@ -56,6 +116,7 @@
 
   $fields->register_element('tooltip-name', [
     'type'       => 'tooltip',
+    'layout'     => 'button', // Optional: 'button', 'text'
     'label'      => 'Top'
     'placement'  => 'top', // Optional: 'start', 'top', 'bottom', 'end' 
     'content'    => 'Tooltip content, placement on top'
@@ -72,8 +133,9 @@
     {
       name       : 'tooltip-name',
       type       : 'tooltip',
+      layout     : 'button', // Optional: 'button', 'text'
       label      : 'Top',
-      placement  : 'top',
+      placement  : 'top', // Optional: 'start', 'top', 'bottom', 'end' 
       content    : 'Tooltip content, placement on top'
     }
     'element'
