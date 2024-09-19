@@ -34,6 +34,7 @@
     'layout'    => 'button',
     'label'     => 'Button Hover Bottom',
     'placement' => 'bottom',
+    'theme'     => 'dark',
     'content'   => 'Tooltip button content, placement on bottom'
   ]) ?>
   <?= $fields->render_element('tooltip-button-bottom') ?>
@@ -47,6 +48,7 @@
     'layout'    => 'button',
     'label'     => 'Button Hover End',
     'placement' => 'end',
+    'theme'     => 'dark',
     'content'   => 'Tooltip button content, placement on end'
   ]) ?>
   <?= $fields->render_element('tooltip-button-end') ?>
@@ -62,6 +64,7 @@
     'layout'    => 'text',
     'label'     => 'Text Hover Start',
     'placement' => 'start',
+    'theme'     => 'dark',
     'content'   => 'Tooltip text content, placement on start'
   ]) ?>
   <?= $fields->render_element('tooltip-text-start') ?>
@@ -75,6 +78,7 @@
     'layout'    => 'text',
     'label'     => 'Text Hover Top',
     'placement' => 'top',
+    'theme'     => 'dark',
     'content'   => 'Tooltip text content, placement on top'
   ]) ?>
   <?= $fields->render_element('tooltip-text-top') ?>
@@ -119,6 +123,7 @@
     'layout'     => 'button', // Optional: 'button', 'text'
     'label'      => 'Top'
     'placement'  => 'top', // Optional: 'start', 'top', 'bottom', 'end' 
+    'theme'      => 'light', // Optional: 'dark', 'light'
     'content'    => 'Tooltip content, placement on top'
   );
 
@@ -136,6 +141,7 @@
       layout     : 'button', // Optional: 'button', 'text'
       label      : 'Top',
       placement  : 'top', // Optional: 'start', 'top', 'bottom', 'end' 
+      theme      : 'light', // Optional: 'dark', 'light'
       content    : 'Tooltip content, placement on top'
     }
     'element'
