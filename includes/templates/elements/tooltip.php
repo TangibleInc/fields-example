@@ -119,12 +119,13 @@
   // Example - PHP
 
   $fields->register_element('tooltip-name', [
-    'type'       => 'tooltip',
-    'layout'     => 'button', // Optional: 'button', 'text'
-    'label'      => 'Top'
-    'placement'  => 'top', // Optional: 'start', 'top', 'bottom', 'end' 
-    'theme'      => 'light', // Optional: 'dark', 'light'
-    'content'    => 'Tooltip content, placement on top'
+    'type'          => 'tooltip',
+    'layout'        => 'button', // Optional: 'button', 'text'
+    'button_props'  => [ 'type' => 'primary' ], // Optional, anything supported by the button element
+    'label'         => 'Top'
+    'placement'     => 'top', // Optional: 'start', 'top', 'bottom', 'end'
+    'theme'         => 'light', // Optional: 'dark', 'light'
+    'content'       => 'Tooltip content, placement on top'
   );
 
   echo $fields->render_element('tooltip-name')
@@ -136,13 +137,14 @@
 
   const component = tangibleFields.render(
     {
-      name       : 'tooltip-name',
-      type       : 'tooltip',
-      layout     : 'button', // Optional: 'button', 'text'
-      label      : 'Top',
-      placement  : 'top', // Optional: 'start', 'top', 'bottom', 'end' 
-      theme      : 'light', // Optional: 'dark', 'light'
-      content    : 'Tooltip content, placement on top'
+      name        : 'tooltip-name',
+      type        : 'tooltip',
+      layout      : 'button', // Optional: 'button', 'text'
+      buttonProps : { onPress: () => console.log('Button pressed') } // Optional, anything supported by the button element
+      label       : 'Top',
+      placement   : 'top', // Optional: 'start', 'top', 'bottom', 'end'
+      theme       : 'light', // Optional: 'dark', 'light'
+      content     : 'Tooltip content, placement on top'
     }
     'element'
   )
